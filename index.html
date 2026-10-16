@@ -46,7 +46,11 @@ body{background:#290912 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABogAA
 @media(max-width:480px){.choice{grid-template-columns:minmax(0,1fr) auto;column-gap:8px;font-size:20px}.download-meta{gap:8px;max-width:170px}.mod-version{padding:7px 8px;font-size:9px}.download-meta .arrow{width:32px;height:32px;flex-basis:32px}}
 @media(max-width:350px){.choice{grid-template-columns:1fr}.download-meta{max-width:100%;width:100%;justify-content:space-between;margin-top:12px}.mod-version{font-size:10px}}
 </style>
-</head>
+<style>
+#notice{width:min(94vw,680px);max-height:90svh;overflow:auto}.channel-downloads{display:grid;gap:12px;margin:20px 0}.channel-downloads[hidden]{display:none}.file-download{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;border:1px solid #ffffff55;border-radius:15px;background:linear-gradient(145deg,#ffffff26,#ffffff0a);box-shadow:inset 0 1px 0 #ffffff60;color:white;text-decoration:none;font:700 14px 'Trebuchet MS',Arial,sans-serif;min-width:0;cursor:pointer}.file-download>span:first-child{min-width:0;overflow-wrap:anywhere}.file-meta{display:flex;align-items:center;gap:10px;max-width:60%}.file-arrow{display:grid;place-items:center;width:30px;height:30px;flex:0 0 30px;border:1px solid #ffffff55;border-radius:50%;line-height:1}.file-download[aria-disabled],.file-download:disabled{opacity:.6;cursor:not-allowed}.file-download:hover{background:#ffffff25}#download-status:empty{display:none}@media(max-width:480px){#notice{padding:20px}.file-download{flex-direction:column;align-items:stretch}.file-meta{max-width:100%;justify-content:space-between}}
+</style><style id="official-links-style">
+.official-links{position:relative;margin:0 5vw 40px;padding:28px;border:1px solid #ffffff55;border-radius:26px;background:linear-gradient(145deg,#ffffff24,#54112938 55%,#ffffff10);backdrop-filter:blur(20px) saturate(135%);-webkit-backdrop-filter:blur(20px) saturate(135%);box-shadow:inset 0 1px 1px #ffffff70,0 15px 40px #19000a44}.official-links h2{margin:0 0 24px;font-size:24px;letter-spacing:1px}.official-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.official-group{min-width:0}.official-group h3{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#f0c6d7;margin:0 0 10px}.official-button{display:flex;width:100%;justify-content:space-between;align-items:center;gap:12px;min-height:58px;margin-top:10px;padding:15px 18px;border:1px solid #ffffff55;border-radius:15px;background:linear-gradient(150deg,#ffffff2c,#ffffff0a);box-shadow:inset 0 1px 0 #ffffff60;color:white;font:700 15px 'Trebuchet MS',Arial,sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,transform .2s}.official-button:hover{background:#ffffff30;transform:translateY(-2px)}.official-button:focus-visible{outline:3px solid #ffd4e2;outline-offset:3px}.official-button:disabled{opacity:.6;cursor:not-allowed;transform:none}.unavailable-social{flex-wrap:wrap}.official-links .mod-version{font-size:10px}.official-links p{color:#f0c6d7;font-size:12px;line-height:1.6}.official-links p:empty{display:none}@media(max-width:600px){.official-links{margin:0 24px 30px;padding:22px}.official-grid{grid-template-columns:1fr;gap:20px}.official-links h2{font-size:21px}}
+</style></head>
 <body>
 <div id="space" aria-hidden="true"></div>
 <header><span class="signal">AGMM</span><span class="creator"><strong>Kaelen</strong> © 2026</span><span class="brand">Site 0.1.0 Beta</span></header>
@@ -54,9 +58,17 @@ body{background:#290912 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABogAA
 <svg class="orbit" viewBox="0 0 180 220" aria-hidden="true"><g stroke="#02040a" stroke-width="9" stroke-linejoin="round"><rect x="122" y="75" width="39" height="91" rx="17" fill="#801d32"/><path d="M40 169V83C40 15 139 15 139 83V193H105V165H78V193H42Z" fill="#db3b50"/><path d="M48 111V76C48 38 95 29 116 52C72 44 64 76 64 111Z" fill="#ff6975" stroke="none"/><rect x="71" y="64" width="84" height="51" rx="24" fill="#8cbed5"/><path d="M89 76H130" stroke="#dcf8ff" stroke-width="13" stroke-linecap="round"/></g></svg>
 <section class="menu" aria-label="Menu principal AGMM"><p class="eyebrow">Prepare-se para curtir um mod bem BR</p><h1 class="logo">AGMM <span>ALL GAMEMODES MODIFIED</span><span class="site-version">Site 0.1.0 Beta</span></h1><p class="subtitle">Novos modos. Muito mais funções e mais SUSpeitas.<br>Escolha a sua versão e mergulhe na diversão.</p><div class="buttons"><button class="choice beta" data-channel="beta"><span><span class="badge">VERSÃO DE TESTES</span>Beta Release</span><span class="download-meta"><span class="mod-version"><span class="version-dot" aria-hidden="true"></span><span id="versao-beta">Versão Beta: a definir</span></span><span class="arrow" aria-hidden="true">↗</span></span></button><button class="choice stable" data-channel="release"><span><span class="badge">VERSÃO ESTÁVEL</span>Release</span><span class="download-meta"><span class="mod-version"><span class="version-dot" aria-hidden="true"></span><span id="versao-release">Versão Release: a definir</span></span><span class="arrow" aria-hidden="true">↗</span></span></button></div><p class="note">ESCOLHA SUA VERSÃO PARA CONTINUAR</p></section>
 <svg class="orbit second" viewBox="0 0 180 220" aria-hidden="true"><g stroke="#02040a" stroke-width="9" stroke-linejoin="round"><rect x="122" y="75" width="39" height="91" rx="17" fill="#29635d"/><path d="M40 169V83C40 15 139 15 139 83V193H105V165H78V193H42Z" fill="#70c7b5"/><rect x="71" y="64" width="84" height="51" rx="24" fill="#8cbed5"/><path d="M89 76H130" stroke="#dcf8ff" stroke-width="13" stroke-linecap="round"/></g></svg>
-</main><footer>AGMM · PROJETO DA COMUNIDADE<br>Projeto independente, sem afiliação com a Innersloth.</footer>
+</main><section class="official-links" aria-labelledby="official-title">
+<h2 id="official-title">Links Oficiais:</h2>
+<div class="official-grid">
+<div class="official-group"><h3>Discord</h3><a class="official-button" id="discord-1" role="button" tabindex="0">Discord 1 <span aria-hidden="true">↗</span></a><a class="official-button" id="discord-2" role="button" tabindex="0">Discord 2 <span aria-hidden="true">↗</span></a></div>
+<div class="official-group"><h3>YouTube</h3><a class="official-button" id="youtube" role="button" tabindex="0">YouTube <span aria-hidden="true">↗</span></a></div>
+<div class="official-group"><h3>Twitch</h3><a class="official-button" id="twitch" role="button" tabindex="0">Twitch <span aria-hidden="true">↗</span></a></div>
+<div class="official-group"><h3>X / Twitter</h3><button class="official-button unavailable-social" disabled><span>X / Twitter</span><span class="mod-version"><span class="version-dot" aria-hidden="true"></span>Não Disponível</span></button></div>
+</div><p id="official-status" role="status"></p>
+</section><footer>AGMM · PROJETO DA COMUNIDADE<br>Projeto independente, sem afiliação com a Innersloth.</footer>
 <dialog id="notice"><h2 id="notice-title"></h2><p>Olá Tripulante! Nesse momento o MOD ainda nao está disponivel para você. Mas não se preocupe, você pode voltar ao menu e ler as paginas abaixo para saber mais sobre o projeto e o que ainda está por vir. Quando o download for liberado o site atualizara!
-</p><form method="dialog"><button>Voltar ao menu</button></form></dialog>
+</p><section class="channel-downloads" id="downloads-beta" hidden><a class="file-download" id="beta-dll" download aria-disabled="true"><span>Baixar Dll Beta:</span><span class="file-meta"><span class="mod-version"><span class="version-dot"></span><span data-file-version="beta"></span></span><span class="file-arrow">↓</span></span></a><a class="file-download" id="beta-steam" download aria-disabled="true"><span>Baixar pasta para Steam</span><span class="file-meta"><span class="mod-version"><span class="version-dot"></span><span data-file-version="beta"></span></span><span class="file-arrow">↓</span></span></a><a class="file-download" id="beta-epicStore" download aria-disabled="true"><span>Baixar Pasta para Epic e Store</span><span class="file-meta"><span class="mod-version"><span class="version-dot"></span><span data-file-version="beta"></span></span><span class="file-arrow">↓</span></span></a><button class="file-download" disabled>Souce-code (MOD DE CODIGO FECHADO) 🔒</button></section><section class="channel-downloads" id="downloads-release" hidden><a class="file-download" id="release-dll" download aria-disabled="true"><span>Baixar Dll</span><span class="file-meta"><span class="mod-version"><span class="version-dot"></span><span data-file-version="release"></span></span><span class="file-arrow">↓</span></span></a><a class="file-download" id="release-steam" download aria-disabled="true"><span>Baixar pasta para Steam</span><span class="file-meta"><span class="mod-version"><span class="version-dot"></span><span data-file-version="release"></span></span><span class="file-arrow">↓</span></span></a><a class="file-download" id="release-epicStore" download aria-disabled="true"><span>Baixar Pasta para Epic e Store</span><span class="file-meta"><span class="mod-version"><span class="version-dot"></span><span data-file-version="release"></span></span><span class="file-arrow">↓</span></span></a><button class="file-download" disabled>Souce-code (MOD DE CODIGO FECHADO) 🔒</button></section><p id="download-status" role="status"></p><form method="dialog"><button>Voltar ao menu</button></form></dialog>
 <script>
 // Cole entre as aspas os links oficiais de download de cada versão.
 // VERSÃO BETA: altere somente o valor entre aspas abaixo.
@@ -68,15 +80,58 @@ const VERSAO_RELEASE = 'Indisponível';
 document.getElementById('versao-beta').textContent = 'Versão Beta: ' + VERSAO_BETA;
 document.getElementById('versao-release').textContent = 'Versão Release: ' + VERSAO_RELEASE;
 
-const DOWNLOADS = { beta: '', release: '' };
+// DOWNLOADS BETA: caminhos separados dos arquivos.
+const DOWNLOADS_BETA = { dll: '', steam: '', epicStore: '' };
+// DOWNLOADS RELEASE: caminhos separados dos arquivos.
+const DOWNLOADS_RELEASE = { dll: 'https://github.com/Nickzin-Vtuber/Town-Of-Next-Edited-MODIFIED-/releases/download/Beta/TONE.beta_release.dll', steam: '', epicStore: '' };
 let seed=42;function random(){seed=(seed*16807)%2147483647;return(seed-1)/2147483646}const space=document.querySelector('#space');for(let i=0;i<110;i++){const star=document.createElement('i');star.className='star';const size=random()*2+1;star.style.cssText=`left:${random()*100}%;top:${random()*100}%;width:${size}px;height:${size}px;animation-delay:-${random()*4}s`;space.append(star)}
-const notice=document.querySelector('#notice');document.querySelectorAll('[data-channel]').forEach(button=>button.addEventListener('click',()=>{const channel=button.dataset.channel;const link=DOWNLOADS[channel];if(link){window.location.assign(link);return}document.querySelector('#notice-title').textContent=channel==='beta'?'Beta Release':'Release';notice.showModal()}));notice.addEventListener('click',event=>{if(event.target===notice){const r=notice.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)notice.close()}});
+const notice=document.querySelector('#notice');
+const channels={beta:{version:VERSAO_BETA,files:DOWNLOADS_BETA},release:{version:VERSAO_RELEASE,files:DOWNLOADS_RELEASE}};
+for(const [channel,config] of Object.entries(channels)){
+ document.querySelectorAll(`[data-file-version="${channel}"]`).forEach(el=>el.textContent=`Versão ${channel==='beta'?'Beta':'Release'}: ${config.version}`);
+ for(const [kind,path] of Object.entries(config.files)){
+  const link=document.getElementById(`${channel}-${kind}`);
+  if(path.trim()){link.href=path;link.removeAttribute('aria-disabled');}
+  link.addEventListener('click',event=>{if(!path.trim()){event.preventDefault();document.getElementById('download-status').textContent='Este arquivo ainda não está disponível.';}});
+ }
+}
+document.querySelectorAll('[data-channel]').forEach(button=>button.addEventListener('click',()=>{
+ const channel=button.dataset.channel;
+ document.getElementById('notice-title').textContent=channel==='beta'?'Beta Release':'Release';
+ document.querySelectorAll('.channel-downloads').forEach(section=>section.hidden=section.id!==`downloads-${channel}`);
+ document.getElementById('download-status').textContent='';notice.showModal();
+}));
+notice.addEventListener('click',event=>{if(event.target===notice){const r=notice.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)notice.close();}});
+// LINKS OFICIAIS — cole cada endereço entre as aspas.
+const LINKS_OFICIAIS = {
+  discord1: '', // Primeiro botão do Discord
+  discord2: '', // Segundo botão do Discord
+  youtube: '',
+  twitch: ''
+};
+for (const [key, id] of Object.entries({discord1:'discord-1',discord2:'discord-2',youtube:'youtube',twitch:'twitch'})) {
+  const button = document.getElementById(id);
+  const url = LINKS_OFICIAIS[key].trim();
+  if (url) {
+    button.href = url;
+    button.target = '_blank';
+    button.rel = 'noopener noreferrer';
+    button.removeAttribute('role');
+  } else {
+    const notify = () => document.getElementById('official-status').textContent = 'O link oficial deste botão ainda não foi informado.';
+    button.addEventListener('click', notify);
+    button.addEventListener('keydown', event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); notify(); } });
+  }
+}
 </script>
 </body>
 </html>
 
 
  
+
+
+
 
 
 
