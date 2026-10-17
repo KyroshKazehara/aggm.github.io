@@ -8,7 +8,7 @@ self.addEventListener('push',event=>{
   body:typeof data.body==='string'?data.body:'Uma nova atualização está disponível. Toque para ver as notas.',
   icon:new URL('agmm-icon.png',root).href,badge:new URL('agmm-icon.png',root).href,
   tag:'agmm-release-'+String(data.id||'latest').slice(0,100),
-  data:{url:new URL('?release-notes=1#home',root).href}
+  data:{url:new URL(data.kind==='suggestion'?'?suggestion-alert=1#suggestions':'?release-notes=1#home',root).href}
  }));
 });
 self.addEventListener('notificationclick',event=>{
