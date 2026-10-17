@@ -55,16 +55,16 @@
     {
       "name": "Sem erros observados de carregamento/JavaScript",
       "passed": false,
-      "detail": "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "detail": "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     }
   ],
   "passed": 8,
   "total": 11,
   "errors": [
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
     "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:57206' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
   ],
-  "testedAt": "2026-10-17T13:03:22.366Z",
+  "testedAt": "2026-10-17T13:03:46.801Z",
   "scope": "Verificações de DOM, carregamento e layout; não cobre fluxos, backend, contraste ou todas as interações."
 }
