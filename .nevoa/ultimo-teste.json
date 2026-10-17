@@ -1,5 +1,5 @@
 {
-  "url": "http://127.0.0.1:61675/preview/index.html",
+  "url": "http://127.0.0.1:53772/preview/index.html",
   "title": "ALL GAMEMODES MODIFIED — Site 0.1.6 Beta",
   "checks": [
     {
@@ -55,16 +55,17 @@
     {
       "name": "Sem erros observados de carregamento/JavaScript",
       "passed": false,
-      "detail": "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "detail": "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-MNQhiM8zklKaPEVQfCzU8FCNtzR+mvV56zqEYZBID+I=''. Either the 'unsafe-inline' keyword, a hash ('sha256-d+CR3/ubbreu914xC+ajEzHrJNxWQ8zbggq2HsuuE5o='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:53772' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:53772' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:53772' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     }
   ],
   "passed": 8,
   "total": 11,
   "errors": [
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+    "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-MNQhiM8zklKaPEVQfCzU8FCNtzR+mvV56zqEYZBID+I=''. Either the 'unsafe-inline' keyword, a hash ('sha256-d+CR3/ubbreu914xC+ajEzHrJNxWQ8zbggq2HsuuE5o='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:53772' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:53772' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:53772' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
   ],
-  "testedAt": "2026-10-17T12:17:42.780Z",
+  "testedAt": "2026-10-17T12:37:03.756Z",
   "scope": "Verificações de DOM, carregamento e layout; não cobre fluxos, backend, contraste ou todas as interações."
 }

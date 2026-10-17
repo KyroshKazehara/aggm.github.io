@@ -437,6 +437,23 @@ if('ResizeObserver'in window){const observer=new ResizeObserver(resize);observer
 })();
 
 </script>
+<!-- nevoa-presentation-v1 -->
+<style>
+#nevoa-presentation-v1{color:#fff0f5;background:linear-gradient(145deg,rgba(84,27,52,.86),rgba(29,15,34,.90));border:1px solid #ffd5e65c;border-radius:28px;padding:clamp(24px,5vw,42px);width:min(520px,calc(100vw - 32px));box-sizing:border-box;max-height:85dvh;overflow:auto;box-shadow:0 28px 90px #100813a8,inset 0 1px 0 #ffffff60;backdrop-filter:blur(24px) saturate(150%);font-family:inherit}
+#nevoa-presentation-v1[open]{animation:nevoa-presentation-enter .3s ease-out}
+#nevoa-presentation-v1::backdrop{background:#170a226e;backdrop-filter:blur(7px)}
+#nevoa-presentation-v1 h2{margin:0 0 16px;font:inherit;font-size:clamp(24px,5vw,34px);font-weight:650;color:#ffe1ee}
+#nevoa-presentation-v1 p{font-size:16px;line-height:1.7;margin:0 0 24px;color:#f4d6e3}
+#nevoa-presentation-close{font:inherit;color:#fff1f7;background:linear-gradient(135deg,#ffd7e42e,#f0a2c20c);border:1px solid #ffe0ed70;border-radius:16px;padding:13px 24px;cursor:pointer;box-shadow:inset 0 1px 0 #ffffff60;transition:background .2s,transform .2s}
+#nevoa-presentation-close:hover{background:#ffd7e440;transform:translateY(-2px)}
+#nevoa-presentation-close:focus-visible{outline:3px solid #ffc7e1;outline-offset:4px}
+@keyframes nevoa-presentation-enter{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){#nevoa-presentation-v1[open]{animation:none}#nevoa-presentation-close{transition:none}}
+</style>
+<dialog id="nevoa-presentation-v1" aria-labelledby="nevoa-presentation-title" aria-describedby="nevoa-presentation-text"><h2 id="nevoa-presentation-title">Olá, eu sou a Nevoa!</h2><p id="nevoa-presentation-text">Olá, eu sou a Nevoa! Sou sua assistente para criar e melhorar o site AGMM. Esta é uma demonstração na versão de testes.</p><button id="nevoa-presentation-close" type="button">Olá, Nevoa!</button></dialog>
+<script>
+(()=>{const start=()=>{const dialog=document.getElementById('nevoa-presentation-v1');const button=document.getElementById('nevoa-presentation-close');const key='nevoa-presentation-v1:shown';let shown=false;try{shown=sessionStorage.getItem(key)==='1'}catch{}if(shown||!dialog||!button||typeof dialog.showModal!=='function')return;const previous=document.activeElement;button.addEventListener('click',()=>dialog.close());dialog.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();dialog.close();}});dialog.addEventListener('close',()=>{if(previous&&previous.isConnected&&typeof previous.focus==='function')previous.focus();});dialog.showModal();try{sessionStorage.setItem(key,'1')}catch{}button.focus();};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();})();
+</script>
 </body>
 </html>
 
