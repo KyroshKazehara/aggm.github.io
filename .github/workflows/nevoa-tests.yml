@@ -1,0 +1,24 @@
+name: Nevoa - testes do site
+on:
+  push:
+    branches: ['nevoa/testes-**']
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verificar HTML e emitir alertas
+        run: python .nevoa/validate.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: nevoa-relatorio-e-html
+          path: |
+            .nevoa/relatorio-ci.json
+            .nevoa/ultimo-teste.json
+            index.html
+          retention-days: 7
