@@ -1,71 +1,36 @@
 {
-  "url": "http://127.0.0.1:56711/preview/index.html",
-  "title": "ALL GAMEMODES MODIFIED — Site 0.1.6 Beta",
+  "testedAt": "2026-10-17T12:50:34.153Z",
+  "scope": "Teste real do componente sobre HTML AGMM no Electron; não valida backend ou todos os fluxos do site.",
   "checks": [
     {
-      "name": "Título da página",
-      "passed": true,
-      "detail": "ALL GAMEMODES MODIFIED — Site 0.1.6 Beta"
+      "name": "abertura",
+      "passed": true
     },
     {
-      "name": "Idioma do documento",
-      "passed": true,
-      "detail": "pt-BR"
+      "name": "fechar pelo botão",
+      "passed": true
     },
     {
-      "name": "Viewport responsivo",
-      "passed": true,
-      "detail": "Meta viewport"
+      "name": "reabrir na mesma sessão e fechar",
+      "passed": true
     },
     {
-      "name": "Título principal",
-      "passed": false,
-      "detail": "5 elementos h1"
+      "name": "Escape",
+      "passed": true
     },
     {
-      "name": "Sem rolagem horizontal no painel",
-      "passed": true,
-      "detail": "502px"
+      "name": "uma vez por sessão",
+      "passed": true
     },
     {
-      "name": "Sem rolagem horizontal em 390px",
-      "passed": true,
-      "detail": "390px"
+      "name": "largura 390px",
+      "passed": true
     },
     {
-      "name": "Controles com nome acessível",
-      "passed": true,
-      "detail": "0 controles a revisar"
-    },
-    {
-      "name": "Imagens com atributo alt",
-      "passed": true,
-      "detail": "0 imagens a revisar"
-    },
-    {
-      "name": "Imagens carregadas",
-      "passed": false,
-      "detail": "2 imagens com falha"
-    },
-    {
-      "name": "Links sem destino vazio",
-      "passed": true,
-      "detail": "0 links vazios"
-    },
-    {
-      "name": "Sem erros observados de carregamento/JavaScript",
-      "passed": false,
-      "detail": "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-MNQhiM8zklKaPEVQfCzU8FCNtzR+mvV56zqEYZBID+I=''. Either the 'unsafe-inline' keyword, a hash ('sha256-d+CR3/ubbreu914xC+ajEzHrJNxWQ8zbggq2HsuuE5o='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:56711' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:56711' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:56711' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "name": "desfoque CSS",
+      "passed": true
     }
   ],
-  "passed": 8,
-  "total": 11,
-  "errors": [
-    "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-MNQhiM8zklKaPEVQfCzU8FCNtzR+mvV56zqEYZBID+I=''. Either the 'unsafe-inline' keyword, a hash ('sha256-d+CR3/ubbreu914xC+ajEzHrJNxWQ8zbggq2HsuuE5o='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:56711' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:56711' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:56711' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
-  ],
-  "testedAt": "2026-10-17T12:45:27.415Z",
-  "scope": "Verificações de DOM, carregamento e layout; não cobre fluxos, backend, contraste ou todas as interações."
+  "passed": 7,
+  "total": 7
 }
