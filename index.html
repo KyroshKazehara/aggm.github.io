@@ -2,8 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-bXcSaebo0LDVDuMIEy+NQ3npXDlNQ7cwZAwMMQj0Iz4='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://agmm-comunidade.lukee-vstone.workers.dev; connect-src 'self' https://agmm-comunidade.lukee-vstone.workers.dev; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-BE5Am4Tr7ZjfuGVxwbOvGQkRr9qTn3g0JF/9Gn167/U='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://agmm-comunidade.lukee-vstone.workers.dev; connect-src 'self' https://agmm-comunidade.lukee-vstone.workers.dev; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'">
 <meta name="referrer" content="no-referrer">
+
+
 
 
 
@@ -90,11 +92,13 @@ body{background:#290912 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABogAA
 
 .agmm-promo{width:min(1100px,calc(100% - 40px));margin:25px auto 10px;border:1px solid #b74662;border-radius:22px;overflow:hidden;background:#250f1b;box-shadow:0 14px 40px #0006}.agmm-promo img{display:block;width:100%;height:auto}.agmm-promo-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;padding:16px}.agmm-promo-links a{color:#ffe7ed;font-weight:700;text-decoration:none;border:1px solid #9e4560;border-radius:30px;padding:10px 20px}.agmm-promo-links a:hover{background:#80304c}
 
+.site-nav [data-page="creations"]{position:relative}.creations-update-dot{position:absolute;top:3px;right:3px;width:9px;height:9px;border-radius:50%;background:#ff557e;border:2px solid #471d33;box-shadow:0 0 9px #ff557eaa;pointer-events:none}.creations-update-dot[hidden]{display:none}
+
 </style>
 <link rel="icon" type="image/png" href="agmm-icon.png"><link rel="apple-touch-icon" href="agmm-icon.png"><meta property="og:type" content="website"><meta property="og:title" content="AGMM — All Gamemodes Modified"><meta property="og:description" content="Conheça as funções, cartas e modos do AGMM. Baixe o mod e participe da comunidade no Discord."><meta property="og:url" content="https://kyroshkazehara.github.io/aggm.github.io/"><meta property="og:image" content="https://kyroshkazehara.github.io/aggm.github.io/agmm-banner.png"><meta property="og:image:alt" content="Banner AGMM com o cenário e os tripulantes do mod"><meta name="twitter:card" content="summary_large_image"></head>
 <body>
 <div id="space" aria-hidden="true"></div>
-<header><button type="button" class="signal home-link" data-page="home" aria-label="Voltar aos downloads do AGMM">AGMM</button><span class="creator"><strong>Kaelen</strong> © 2026</span><span class="brand">Site 0.1.5 Beta</span><nav class="site-nav" aria-label="Navegação do site"><button type="button" data-page="functions">Funções e Modos</button><button type="button" class="community-nav-button" data-page="creations">Criações do AGMM</button><button type="button" data-page="suggestions">Sugestão de Função</button><button type="button" data-page="account" class="account-link"><img id="nav-avatar" class="nav-avatar" alt="" hidden><span id="account-label">Entrar</span></button></nav></header>
+<header><button type="button" class="signal home-link" data-page="home" aria-label="Voltar aos downloads do AGMM">AGMM</button><span class="creator"><strong>Kaelen</strong> © 2026</span><span class="brand">Site 0.1.5 Beta</span><nav class="site-nav" aria-label="Navegação do site"><button type="button" data-page="functions">Funções e Modos</button><button type="button" class="community-nav-button" data-page="creations">Criações do AGMM<span id="creations-update-dot" class="creations-update-dot" hidden aria-hidden="true"></span></button><button type="button" data-page="suggestions">Sugestão de Função</button><button type="button" data-page="account" class="account-link"><img id="nav-avatar" class="nav-avatar" alt="" hidden><span id="account-label">Entrar</span></button></nav></header>
 <div id="home-page"><section class="agmm-promo" aria-label="Comunidade AGMM"><a href="https://discord.gg/tmzvF387SU" target="_blank" rel="noopener noreferrer" aria-label="Entrar no Discord do AGMM"><img src="agmm-banner.png" width="2172" height="724" alt="AGMM — All Gamemodes Modified. Entre na comunidade."></a><div class="agmm-promo-links"><a href="https://discord.gg/tmzvF387SU" target="_blank" rel="noopener noreferrer">Entrar no Discord ↗</a><a href="https://kyroshkazehara.github.io/aggm.github.io/#home">Site oficial do AGMM ↗</a></div></section>
 <main>
 <svg class="orbit" viewBox="0 0 180 220" aria-hidden="true"><g stroke="#02040a" stroke-width="9" stroke-linejoin="round"><rect x="122" y="75" width="39" height="91" rx="17" fill="#801d32"/><path d="M40 169V83C40 15 139 15 139 83V193H105V165H78V193H42Z" fill="#db3b50"/><path d="M48 111V76C48 38 95 29 116 52C72 44 64 76 64 111Z" fill="#ff6975" stroke="none"/><rect x="71" y="64" width="84" height="51" rx="24" fill="#8cbed5"/><path d="M89 76H130" stroke="#dcf8ff" stroke-width="13" stroke-linecap="round"/></g></svg>
@@ -206,6 +210,14 @@ window.AGMM_SITE = { apiBase: "https://agmm-comunidade.lukee-vstone.workers.dev"
  const $=id=>document.getElementById(id), config=window.AGMM_SITE||{};
  let configured=false,base='';
  try {if(typeof config.apiBase==='string'&&config.apiBase.trim()){const endpoint=new URL(config.apiBase==='same-origin'?location.origin:config.apiBase);const local=['127.0.0.1','localhost','[::1]'].includes(endpoint.hostname);if((endpoint.protocol!=='https:'&&!(local&&endpoint.protocol==='http:'))||endpoint.username||endpoint.password||endpoint.search||endpoint.hash||!['','/'].includes(endpoint.pathname))throw new Error('Endereço da API inválido.');base=endpoint.origin;configured=true;}}catch{}
+ let creationsUpdateId='';
+ function creationsBadge(id){
+  if(id)creationsUpdateId=id;if(!creationsUpdateId)return;
+  let seen='';try{seen=localStorage.getItem('agmm-creations-seen-update')||'';}catch{}
+  const opened=location.hash==='#creations';
+  if(!seen||opened){seen=creationsUpdateId;try{localStorage.setItem('agmm-creations-seen-update',seen);}catch{}}
+  const unread=seen!==creationsUpdateId;const button=document.querySelector('[data-page="creations"]');$('creations-update-dot').hidden=!unread;button.setAttribute('aria-label',unread?'Criações do AGMM — novidades disponíveis':'Criações do AGMM');
+ }
  let sessionToken='',user=null,adminToken='',catalog=[],filter='todos',originalsOnly=false;
  // Remove old preview tokens. Real sessions remain only in this page's memory.
  try {sessionStorage.removeItem('agmm-session');}catch{}
@@ -231,7 +243,7 @@ window.AGMM_SITE = { apiBase: "https://agmm-comunidade.lukee-vstone.workers.dev"
   document.querySelectorAll('[data-page]').forEach(el=>{el.classList.toggle('active',el.dataset.page===name);if(el.dataset.page===name)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
   if(location.hash!==`#${name}`)history.replaceState(null,'',`#${name}`);
   if(focus){window.scrollTo({top:0,behavior:'instant'});const title=$(`page-${name}`)?.querySelector('h1');if(title){title.tabIndex=-1;title.focus({preventScroll:true});}}
-  if(name==='suggestions'&&user)loadMine();
+  if(name==='suggestions'&&user)loadMine();if(name==='creations')creationsBadge();
   if(name==='functions'||originalsOnly){const title=$('page-functions').querySelector('h1');title.textContent=originalsOnly?'Criações do AGMM':'Funções e Modos';renderCatalog();}
  }
  document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',()=>page(el.dataset.page)));
@@ -313,14 +325,14 @@ window.AGMM_SITE = { apiBase: "https://agmm-comunidade.lukee-vstone.workers.dev"
   try{preference=localStorage.getItem('agmm-updates-choice')||'';baseline=localStorage.getItem('agmm-updates-seen')||'';}catch{}
   function save(key,value){try{localStorage.setItem(key,value);}catch{}}
   function showSettings(){const enabled=preference==='enabled';$('updates-disable').hidden=!enabled;$('updates-enable').hidden=enabled;$('updates-later').hidden=enabled;status('updates-status',enabled?'Alertas ativados neste navegador.':'');if(!dialog.open)dialog.showModal();}
-  async function check(){if(preference!=='enabled'||checking||!configured)return;checking=true;try{const update=await api('/api/updates');if(typeof update.id!=='string'||!update.id)return;if(!baseline){baseline=update.id;save('agmm-updates-seen',baseline);return;}if(update.id===baseline)return;baseline=update.id;save('agmm-updates-seen',baseline);$('updates-message').textContent=update.message||'Uma nova atualização está disponível. Atualize a página para conferir.';$('updates-banner').hidden=false;if(document.hidden&&'Notification'in window&&Notification.permission==='granted'){try{const notification=new Notification('Novidades no AGMM',{body:$('updates-message').textContent,tag:'agmm-site-update'});notification.onclick=()=>{window.focus();notification.close();};}catch{}}}catch{}finally{checking=false;}}
+  async function check(){if(checking||!configured)return;checking=true;try{const update=await api('/api/updates');if(typeof update.id!=='string'||!update.id)return;creationsBadge(update.id);if(preference!=='enabled')return;if(!baseline){baseline=update.id;save('agmm-updates-seen',baseline);return;}if(update.id===baseline)return;baseline=update.id;save('agmm-updates-seen',baseline);$('updates-message').textContent=update.message||'Uma nova atualização está disponível. Atualize a página para conferir.';$('updates-banner').hidden=false;if(document.hidden&&'Notification'in window&&Notification.permission==='granted'){try{const notification=new Notification('Novidades no AGMM',{body:$('updates-message').textContent,tag:'agmm-site-update'});notification.onclick=()=>{window.focus();notification.close();};}catch{}}}catch{}finally{checking=false;}}
   function start(){clearInterval(timer);check();timer=setInterval(check,60000);}
   $('updates-enable').addEventListener('click',async()=>{preference='enabled';save('agmm-updates-choice',preference);if('Notification'in window&&Notification.permission==='default'){try{await Notification.requestPermission();}catch{}}dialog.close();start();});
-  $('updates-disable').addEventListener('click',()=>{preference='disabled';save('agmm-updates-choice',preference);clearInterval(timer);$('updates-banner').hidden=true;dialog.close();});
+  $('updates-disable').addEventListener('click',()=>{preference='disabled';save('agmm-updates-choice',preference);$('updates-banner').hidden=true;dialog.close();});
   function later(){if(!preference){preference='later';save('agmm-updates-choice',preference);}dialog.close();}
   $('updates-later').addEventListener('click',later);$('updates-close').addEventListener('click',later);dialog.addEventListener('cancel',later);
   $('updates-settings').addEventListener('click',showSettings);$('updates-reload').addEventListener('click',()=>location.reload());$('updates-dismiss').addEventListener('click',()=>{$('updates-banner').hidden=true;});window.addEventListener('focus',check);
-  if(preference==='enabled')start();else if(!preference)showSettings();
+  start();if(!preference)showSettings();
  }
  initUpdates();
  init();
