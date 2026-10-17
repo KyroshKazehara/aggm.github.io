@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "AGMM — All Gamemodes Modified",
+  "short_name": "AGMM",
+  "start_url": "./#home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#290912",
+  "theme_color": "#471d33",
+  "icons": [
+    {
+      "src": "agmm-icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
