@@ -454,6 +454,7 @@ if('ResizeObserver'in window){const observer=new ResizeObserver(resize);observer
 <script>
 (()=>{const start=()=>{const dialog=document.getElementById('nevoa-presentation-v1');const button=document.getElementById('nevoa-presentation-close');const key='nevoa-presentation-v1:shown';let shown=false;try{shown=sessionStorage.getItem(key)==='1'}catch{}if(shown||!dialog||!button||typeof dialog.showModal!=='function')return;const previous=document.activeElement;button.addEventListener('click',()=>dialog.close());dialog.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();dialog.close();}});dialog.addEventListener('close',()=>{if(previous&&previous.isConnected&&typeof previous.focus==='function')previous.focus();});dialog.showModal();try{sessionStorage.setItem(key,'1')}catch{}button.focus();};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();})();
 </script>
+<!-- /nevoa-presentation-v1 -->
 </body>
 </html>
 
