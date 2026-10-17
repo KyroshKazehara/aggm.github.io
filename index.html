@@ -54,6 +54,8 @@
 
 
 
+
+
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#060811">
 <title>ALL GAMEMODES MODIFIED — Site 0.1.6 Beta</title>
@@ -131,6 +133,11 @@ body[data-nav-position="bottom"]{padding-bottom:calc(110px + env(safe-area-inset
 .push-settings{border-top:1px solid #ffffff40;margin:20px 0;padding-top:18px;display:grid;gap:12px}.push-settings p{font-size:13px;margin:0}.updates-dialog{max-height:calc(100dvh - 32px);overflow:auto}.updates-dialog .admin-actions{margin-top:18px}
 
 .suggestion-alert{position:fixed;right:20px;bottom:24px;z-index:90;max-width:440px;width:calc(100% - 40px);padding:22px;background:linear-gradient(145deg,#4d2239ed,#21132af2);border:1px solid #f4acc8;border-radius:22px;box-shadow:0 12px 40px #0007;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}.suggestion-alert p{line-height:1.65;overflow-wrap:anywhere}.suggestion-alert .admin-actions{gap:10px}body[data-nav-position="bottom"] .suggestion-alert{bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+/* Keep the navigation on one horizontal row in either position. */
+.site-nav{flex-wrap:nowrap;min-width:0;align-items:center}.site-nav>button{flex:0 1 auto;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-width:0;line-height:1.2}.site-nav .account-link{flex-direction:row}.site-nav .account-link span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body[data-nav-position="bottom"]>.site-nav{display:flex;flex-wrap:nowrap;align-items:center;width:min(860px,calc(100% - 20px))}body[data-nav-position="bottom"]>.site-nav>button{flex:1 1 0;white-space:nowrap;min-width:0;min-height:44px;padding:10px 6px;line-height:1.2}body[data-nav-position="bottom"]>.site-nav .account-link{flex-direction:row;gap:5px}
+@media(min-width:1051px){header{flex-wrap:nowrap}header .site-nav{margin-left:auto;flex-shrink:1}header .site-nav>button{font-size:clamp(10px,.85vw,12px);padding:10px 9px}header .creator,header .brand,header>.home-link{flex-shrink:0;white-space:nowrap}}
+@media(max-width:760px){body[data-nav-position="bottom"]>.site-nav{gap:1px;padding:6px}body[data-nav-position="bottom"]>.site-nav>button{font-size:clamp(7px,2vw,10px);padding:10px 2px;letter-spacing:0}body[data-nav-position="bottom"]>.site-nav .nav-avatar{width:16px;height:16px}header .site-nav{gap:1px}header .site-nav>button{font-size:clamp(8px,2vw,11px);padding:10px 3px;letter-spacing:0}}
 
 </style>
 <link rel="icon" type="image/png" href="agmm-icon.png"><link rel="apple-touch-icon" href="agmm-icon.png"><meta property="og:type" content="website"><meta property="og:title" content="AGMM — All Gamemodes Modified"><meta property="og:description" content="Conheça as funções, cartas e modos do AGMM. Baixe o mod e participe da comunidade no Discord."><meta property="og:url" content="https://kyroshkazehara.github.io/aggm.github.io/"><meta property="og:image" content="https://kyroshkazehara.github.io/aggm.github.io/agmm-banner.png"><meta property="og:image:alt" content="Banner AGMM com o cenário e os tripulantes do mod"><meta name="twitter:card" content="summary_large_image"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#471d33"></head>
