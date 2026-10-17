@@ -1,5 +1,70 @@
 {
-  "source": "Preparação do fluxo Nevoa",
-  "checks": [],
-  "scope": "Fluxo preparado; teste visual detalhado será executado após cada edição."
+  "url": "http://127.0.0.1:61675/preview/index.html",
+  "title": "ALL GAMEMODES MODIFIED — Site 0.1.6 Beta",
+  "checks": [
+    {
+      "name": "Título da página",
+      "passed": true,
+      "detail": "ALL GAMEMODES MODIFIED — Site 0.1.6 Beta"
+    },
+    {
+      "name": "Idioma do documento",
+      "passed": true,
+      "detail": "pt-BR"
+    },
+    {
+      "name": "Viewport responsivo",
+      "passed": true,
+      "detail": "Meta viewport"
+    },
+    {
+      "name": "Título principal",
+      "passed": false,
+      "detail": "5 elementos h1"
+    },
+    {
+      "name": "Sem rolagem horizontal no painel",
+      "passed": true,
+      "detail": "502px"
+    },
+    {
+      "name": "Sem rolagem horizontal em 390px",
+      "passed": true,
+      "detail": "390px"
+    },
+    {
+      "name": "Controles com nome acessível",
+      "passed": true,
+      "detail": "0 controles a revisar"
+    },
+    {
+      "name": "Imagens com atributo alt",
+      "passed": true,
+      "detail": "0 imagens a revisar"
+    },
+    {
+      "name": "Imagens carregadas",
+      "passed": false,
+      "detail": "2 imagens com falha"
+    },
+    {
+      "name": "Links sem destino vazio",
+      "passed": true,
+      "detail": "0 links vazios"
+    },
+    {
+      "name": "Sem erros observados de carregamento/JavaScript",
+      "passed": false,
+      "detail": "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+    }
+  ],
+  "passed": 8,
+  "total": 11,
+  "errors": [
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:61675' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+  ],
+  "testedAt": "2026-10-17T12:17:42.780Z",
+  "scope": "Verificações de DOM, carregamento e layout; não cobre fluxos, backend, contraste ou todas as interações."
 }
