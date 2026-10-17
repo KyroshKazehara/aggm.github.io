@@ -2,8 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-eMNkpF/yokqy88SmoSZeqJkc0+edBVO2RAUs2zI0hkc=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-DtFoQLsLNMrp3e/Al0T+ZFtFg9lhh7SNpdzi/76Eyaw=' 'sha256-rTeG8KfNFyScLzOIzOj3w3VKcfCLrcesPwOTSydLbJA=' 'sha256-XYlB/5xnm+lmo0VOxsmuTCus09TVcXRTcQe4nGcvTdg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://agmm-comunidade.lukee-vstone.workers.dev; connect-src 'self' https://agmm-comunidade.lukee-vstone.workers.dev; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types agmm-service-worker">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-/D6ZFiIM15rdBHhqpfRehk9OJN7ciiErhWEHA007CBU=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-DtFoQLsLNMrp3e/Al0T+ZFtFg9lhh7SNpdzi/76Eyaw=' 'sha256-rTeG8KfNFyScLzOIzOj3w3VKcfCLrcesPwOTSydLbJA=' 'sha256-XYlB/5xnm+lmo0VOxsmuTCus09TVcXRTcQe4nGcvTdg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://agmm-comunidade.lukee-vstone.workers.dev; connect-src 'self' https://agmm-comunidade.lukee-vstone.workers.dev; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types agmm-service-worker">
 <meta name="referrer" content="no-referrer">
+
+
 
 
 
@@ -229,7 +231,7 @@ let seed=42;function random(){seed=(seed*16807)%2147483647;return(seed-1)/214748
 const notice=document.querySelector('#notice');
 const channels={beta:{version:VERSAO_BETA,files:DOWNLOADS_BETA},release:{version:VERSAO_RELEASE,files:DOWNLOADS_RELEASE},'launcher-release':LAUNCHER_RELEASE,'launcher-beta':LAUNCHER_BETA};
 for(const [channel,config] of Object.entries(channels)){
- document.querySelectorAll(`[data-file-version="${channel}"]`).forEach(el=>el.textContent=`Versão ${channel==='beta'?'Beta':'Release'}: ${config.version}`);
+ document.querySelectorAll(`[data-file-version="${channel}"]`).forEach(el=>el.textContent=`Versão ${channel.endsWith('beta')?'Beta':'Release'}: ${config.version}`);
  for(const [kind,path] of Object.entries(config.files)){
   const link=document.getElementById(`${channel}-${kind}`);
   if(path.trim()){link.href=path;link.removeAttribute('aria-disabled');}
