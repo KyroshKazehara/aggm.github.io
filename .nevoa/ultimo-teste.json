@@ -1,74 +1,37 @@
 {
-  "warnings": [
-    "CORS na prévia local; conferir integração na origem oficial."
-  ],
-  "url": "http://127.0.0.1:59074/preview/index.html",
-  "title": "ALL GAMEMODES MODIFIED — Site 0.1.6 Beta",
+  "testedAt": "2026-10-17T13:54:10.995Z",
+  "id": "agmm-weekly-234dde4c123b17ea20",
+  "passed": 7,
+  "total": 7,
   "checks": [
     {
-      "name": "Título da página",
-      "passed": true,
-      "detail": "ALL GAMEMODES MODIFIED — Site 0.1.6 Beta"
+      "name": "Abre automaticamente no componente real",
+      "passed": true
     },
     {
-      "name": "Idioma do documento",
-      "passed": true,
-      "detail": "pt-BR"
+      "name": "Conteúdo confere com os fatos revisados",
+      "passed": true
     },
     {
-      "name": "Viewport responsivo",
-      "passed": true,
-      "detail": "Meta viewport"
+      "name": "Botão Entendi fecha",
+      "passed": true
     },
     {
-      "name": "Título principal",
-      "passed": true,
-      "detail": "1 título(s) visível(is); 5 no documento, incluindo telas ocultas"
+      "name": "Mesmo ID não repete após recarregar",
+      "passed": true
     },
     {
-      "name": "Sem rolagem horizontal no painel",
-      "passed": true,
-      "detail": "502px"
+      "name": "ID novo abre para quem já viu o anterior",
+      "passed": true
     },
     {
-      "name": "Sem rolagem horizontal em 390px",
-      "passed": true,
-      "detail": "390px"
+      "name": "390px sem extrapolar a janela",
+      "passed": true
     },
     {
-      "name": "Controles com nome acessível",
-      "passed": true,
-      "detail": "0 controles a revisar"
-    },
-    {
-      "name": "Imagens com atributo alt",
-      "passed": true,
-      "detail": "0 imagens a revisar"
-    },
-    {
-      "name": "Imagens carregadas",
-      "passed": true,
-      "detail": "0 imagens com origem definida e falha"
-    },
-    {
-      "name": "Links sem destino vazio",
-      "passed": true,
-      "detail": "0 links vazios"
-    },
-    {
-      "name": "Sem erros observados de carregamento/JavaScript",
-      "passed": false,
-      "detail": "A API não autoriza esta origem de prévia local. A proteção foi mantida; não comprova falha no site oficial.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:59074' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:59074' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\nAccess to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:59074' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-      "severity": "warning"
+      "name": "Esc fecha",
+      "passed": true
     }
   ],
-  "passed": 10,
-  "total": 11,
-  "errors": [
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/updates' from origin 'http://127.0.0.1:59074' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/catalog' from origin 'http://127.0.0.1:59074' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
-    "Access to fetch at 'https://agmm-comunidade.lukee-vstone.workers.dev/api/me' from origin 'http://127.0.0.1:59074' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
-  ],
-  "testedAt": "2026-10-17T13:40:07.948Z",
-  "scope": "Verificações de DOM, carregamento e layout; não cobre fluxos, backend, contraste ou todas as interações."
+  "scope": "Teste funcional do aviso no HTML real. Não comprova envio de push nem operações autenticadas do backend."
 }
