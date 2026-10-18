@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-Q4meriA+IRh7tAJ1ddJ7QhT99r9K00bOROcGCaYjSIE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-MNQhiM8zklKaPEVQfCzU8FCNtzR+mvV56zqEYZBID+I=' 'sha256-rTeG8KfNFyScLzOIzOj3w3VKcfCLrcesPwOTSydLbJA=' 'sha256-IH/YyYN3PEYdU7m1QbyHLBBB0O2RgDnP6jEoUm3AEqE=' 'sha256-XYlB/5xnm+lmo0VOxsmuTCus09TVcXRTcQe4nGcvTdg='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://agmm-comunidade.lukee-vstone.workers.dev; connect-src 'self' https://agmm-comunidade.lukee-vstone.workers.dev; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types agmm-service-worker">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-aVOVAmAfY34OdtVKt02mv3LrNT1HWqjDGwTFoZxiHJE=' 'sha256-Q4meriA+IRh7tAJ1ddJ7QhT99r9K00bOROcGCaYjSIE=' 'sha256-wq0KODMpJnBNs3cplLc8Z13WRBmw4ZyhuRQ1Mokkz1k=' 'sha256-MNQhiM8zklKaPEVQfCzU8FCNtzR+mvV56zqEYZBID+I=' 'sha256-rTeG8KfNFyScLzOIzOj3w3VKcfCLrcesPwOTSydLbJA=' 'sha256-IH/YyYN3PEYdU7m1QbyHLBBB0O2RgDnP6jEoUm3AEqE=' 'sha256-XYlB/5xnm+lmo0VOxsmuTCus09TVcXRTcQe4nGcvTdg=' 'sha256-Z2pKNlCt0KZyaaZ2LsYWu21xWeuT1miN0aVn23zW5nw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://agmm-comunidade.lukee-vstone.workers.dev; connect-src 'self' https://agmm-comunidade.lukee-vstone.workers.dev; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types agmm-service-worker">
 <meta name="referrer" content="no-referrer">
 
 
@@ -480,6 +480,62 @@ button.addEventListener('click',()=>dialog.close());dialog.addEventListener('key
 const show=()=>{let seen='';try{seen=localStorage.getItem(key)||''}catch{}if(seen===news.id||document.querySelector('dialog[open]'))return;render();dialog.showModal();button.focus();try{localStorage.setItem(key,news.id)}catch{}};const observer=new MutationObserver(()=>setTimeout(show,0));for(const modal of document.querySelectorAll('dialog')){modal.addEventListener('close',()=>setTimeout(show,0));observer.observe(modal,{attributes:true,attributeFilter:['open']});}setTimeout(show,0);};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();})();
 </script>
 <!-- /nevoa-weekly-review -->
+<style>
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.alert-overlay .alert-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.alert-overlay .alert-content h2 {
+  margin-bottom: 10px;
+}
+.alert-overlay .alert-content p {
+  margin-bottom: 15px;
+}
+.alert-overlay .alert-close {
+  color: #333;
+  cursor: pointer;
+}
+</style>
+<script>
+(function() {
+  const alertOverlay = document.createElement('div');
+  alertOverlay.className = 'alert-overlay';
+  document.body.appendChild(alertOverlay);
+
+  const alertContent = document.createElement('div');
+  alertContent.className = 'alert-content';
+  alertOverlay.appendChild(alertContent);
+
+  const alertClose = document.createElement('button');
+  alertClose.className = 'alert-close';
+  alertClose.textContent = 'Fechar';
+  alertContent.appendChild(alertClose);
+
+  alertClose.addEventListener('click', () => {
+    alertOverlay.style.display = 'none';
+  });
+
+  // Exemplo de uso: Mostrar alerta após 5 segundos
+  setTimeout(() => {
+    alertContent.innerHTML = '<h2>Novidade no AGMM!</h2><p>Confira a novidade para a comunidade AGMM.</p>';
+    alertOverlay.style.display = 'flex';
+  }, 5000);
+})();
+</script>
 </body>
 </html>
 
