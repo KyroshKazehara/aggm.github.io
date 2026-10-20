@@ -1,0 +1,12 @@
+{
+  "id": "agmm-site-pre-release-1.0.0-dock",
+  "version": "1.0.0",
+  "kind": "update",
+  "message": "PRÉ RELEASE 1.0.0: DOCK PARA TODOS!",
+  "notes": [
+    "A dock inferior agora é o padrão para todos nesta versão, inclusive em navegadores com preferência antiga.",
+    "Bolha deslizante, reflexos e efeito de arrasto para mouse e toque; ajuste de altura e área segura no celular.",
+    "Acabamento alternativo para navegadores sem desfoque. As preferências de movimento reduzido são respeitadas.",
+    "Meia noite, Jogos mortais e todas as funções reveladas continuam no catálogo. Você pode escolher o menu no topo em Configurações."
+  ]
+}
