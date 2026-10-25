@@ -1,12 +1,14 @@
 {
-  "id": "agmm-protocolo20-live-20261022",
+  "id": "agmm-launcher-0-1-1-1-assinatura-20261024",
   "version": "1.0.0",
   "kind": "update",
-  "message": "PROTOCOLO 20: SINAL CORROMPIDO",
+  "message": "AGMM Launcher Beta 0.1.1.1 disponível",
   "notes": [
-    "20 novas funções · 1 carta · 1 modo de jogo.",
-    "Os nomes e as habilidades seguem bloqueados.",
-    "Live em 23/10/2026, às 15h50 de Brasília.",
-    "[ARQUIVOS SIGILOSOS] ▓▓▓▓▓▓ [ACESSO NEGADO]"
+    "Patch de assinatura do launcher Android, sem a DLL do mod.",
+    "A Beta 0.1.1.1 mantém a base antiga do launcher e prepara a continuidade das próximas atualizações.",
+    "A assinatura do APK mudou: o Android não permite instalar esta versão por cima da Beta anterior.",
+    "Antes de reinstalar, salve os dados e configurações que quiser manter. A desinstalação pode apagar os dados do launcher.",
+    "Depois, desinstale o launcher antigo e instale o novo APK na opção AGMM Launcher Beta da área de downloads.",
+    "Esta versão não inclui a DLL do AGMM e não é a Release 1.0. Consulte as instruções completas antes de instalar."
   ]
 }
