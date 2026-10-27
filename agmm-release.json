@@ -1,5 +1,5 @@
 {
-  "id": "agmm-lancamento-oficial-site-1-0-20261027",
+  "id": "agmm-lancamento-oficial-site-1-0-20261027-celebracao",
   "version": "1.0",
   "kind": "update",
   "message": "🎉 LANÇAMENTO OFICIAL · AGMM Release 1.0 · Site 1.0 🚀",
@@ -9,6 +9,7 @@
     "DLL avulsa: requer BepInEx compatível já instalado. Com o jogo fechado, substitua a versão anterior em BepInEx/plugins/.",
     "Pode haver bugs. Relate problemas no GitHub com a versão do jogo e os passos para reproduzir.",
     "Site 1.0: os anúncios de pré-release e os timers foram substituídos por LANÇAMENTO OFICIAL.",
-    "🎊 Release 1.0 em destaque amarelo e dourado; downloads disponíveis com bolinha verde piscante. 🟢"
+    "🎊 Release 1.0 em destaque amarelo e dourado; downloads disponíveis com bolinha verde piscante. 🟢",
+    "💛 Avisos gerais com tema dourado comemorativo. Comunidade atualizada em 27/10/2026: 785 inscritos no YouTube e aproximadamente 103 membros no Discord. 🎉"
   ]
 }
