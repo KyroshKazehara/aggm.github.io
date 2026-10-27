@@ -1,8 +1,8 @@
 {
-  "id": "agmm-lancamento-oficial-site-1-0-20261027-celebracao",
+  "id": "agmm-steam-mobile-release-1-0-20261027",
   "version": "1.0",
   "kind": "update",
-  "message": "🎉 LANÇAMENTO OFICIAL · AGMM Release 1.0 · Site 1.0 🚀",
+  "message": "🎉 LANÇAMENTO OFICIAL · Steam + Mobile Release 1.0 📱🚀",
   "notes": [
     "LANÇAMENTO OFICIAL do AGMM Release 1.0: downloads diretos da DLL e do pacote Steam para Windows.",
     "Pacote Steam: inclui BepInEx, runtime e plugin AGMM. Extraia o ZIP e copie o conteúdo da pasta interna para a pasta do jogo, ao lado de Among Us.exe.",
@@ -10,6 +10,10 @@
     "Pode haver bugs. Relate problemas no GitHub com a versão do jogo e os passos para reproduzir.",
     "Site 1.0: os anúncios de pré-release e os timers foram substituídos por LANÇAMENTO OFICIAL.",
     "🎊 Release 1.0 em destaque amarelo e dourado; downloads disponíveis com bolinha verde piscante. 🟢",
-    "💛 Avisos gerais com tema dourado comemorativo. Comunidade atualizada em 27/10/2026: 785 inscritos no YouTube e aproximadamente 103 membros no Discord. 🎉"
+    "💛 Avisos gerais com tema dourado comemorativo. Comunidade atualizada em 27/10/2026: 785 inscritos no YouTube e aproximadamente 103 membros no Discord. 🎉",
+    "📱🎉 Chegou a Release 1.0 do AGMM Launcher para Android, com o mod AGMM incluído!",
+    "🎮 Android 9+, ARM64 e Among Us 2026.9.29 (7492). Limite de 140 FPS; o desempenho depende do aparelho.",
+    "📦 APK oficial com a mesma assinatura das Betas 0.1.1.1 e 0.1.2. Quem usa a Beta 0.1.1 antiga precisa salvar seus dados e fazer migração manual.",
+    "🟢 Download mobile disponível, com tema dourado e bolinha verde piscante. Pode haver bugs. 💛"
   ]
 }
