@@ -1,14 +1,15 @@
 {
-  "id": "agmm-launcher-0-1-1-1-assinatura-20261024",
-  "version": "1.0.0",
+  "id": "agmm-lancamento-oficial-site-1-0-20261027-celebracao",
+  "version": "1.0",
   "kind": "update",
-  "message": "AGMM Launcher Beta 0.1.1.1 disponível",
+  "message": "🎉 LANÇAMENTO OFICIAL · AGMM Release 1.0 · Site 1.0 🚀",
   "notes": [
-    "Patch de assinatura do launcher Android, sem a DLL do mod.",
-    "A Beta 0.1.1.1 mantém a base antiga do launcher e prepara a continuidade das próximas atualizações.",
-    "A assinatura do APK mudou: o Android não permite instalar esta versão por cima da Beta anterior.",
-    "Antes de reinstalar, salve os dados e configurações que quiser manter. A desinstalação pode apagar os dados do launcher.",
-    "Depois, desinstale o launcher antigo e instale o novo APK na opção AGMM Launcher Beta da área de downloads.",
-    "Esta versão não inclui a DLL do AGMM e não é a Release 1.0. Consulte as instruções completas antes de instalar."
+    "LANÇAMENTO OFICIAL do AGMM Release 1.0: downloads diretos da DLL e do pacote Steam para Windows.",
+    "Pacote Steam: inclui BepInEx, runtime e plugin AGMM. Extraia o ZIP e copie o conteúdo da pasta interna para a pasta do jogo, ao lado de Among Us.exe.",
+    "DLL avulsa: requer BepInEx compatível já instalado. Com o jogo fechado, substitua a versão anterior em BepInEx/plugins/.",
+    "Pode haver bugs. Relate problemas no GitHub com a versão do jogo e os passos para reproduzir.",
+    "Site 1.0: os anúncios de pré-release e os timers foram substituídos por LANÇAMENTO OFICIAL.",
+    "🎊 Release 1.0 em destaque amarelo e dourado; downloads disponíveis com bolinha verde piscante. 🟢",
+    "💛 Avisos gerais com tema dourado comemorativo. Comunidade atualizada em 27/10/2026: 785 inscritos no YouTube e aproximadamente 103 membros no Discord. 🎉"
   ]
 }
