@@ -2,12 +2,13 @@
   "id": "agmm-lancamento-oficial-site-1-0-20261027",
   "version": "1.0",
   "kind": "update",
-  "message": "LANÇAMENTO OFICIAL · AGMM Release 1.0 · Site 1.0",
+  "message": "🎉 LANÇAMENTO OFICIAL · AGMM Release 1.0 · Site 1.0 🚀",
   "notes": [
     "LANÇAMENTO OFICIAL do AGMM Release 1.0: downloads diretos da DLL e do pacote Steam para Windows.",
     "Pacote Steam: inclui BepInEx, runtime e plugin AGMM. Extraia o ZIP e copie o conteúdo da pasta interna para a pasta do jogo, ao lado de Among Us.exe.",
     "DLL avulsa: requer BepInEx compatível já instalado. Com o jogo fechado, substitua a versão anterior em BepInEx/plugins/.",
     "Pode haver bugs. Relate problemas no GitHub com a versão do jogo e os passos para reproduzir.",
-    "Site 1.0: os anúncios de pré-release e os timers foram substituídos por LANÇAMENTO OFICIAL."
+    "Site 1.0: os anúncios de pré-release e os timers foram substituídos por LANÇAMENTO OFICIAL.",
+    "🎊 Release 1.0 em destaque amarelo e dourado; downloads disponíveis com bolinha verde piscante. 🟢"
   ]
 }
