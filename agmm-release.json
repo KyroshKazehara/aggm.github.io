@@ -1,16 +1,16 @@
 {
-  "id": "agmm-launcher-release-1-0-1-correcao-20261028",
+  "id": "agmm-novas-funcoes-release-20261028",
   "version": "1.0",
   "kind": "update",
-  "message": "AGMM Launcher 1.0.1 · Patch de correção",
+  "message": "🎉 Novas funções do AGMM · Conheça as novidades! 🎮",
   "notes": [
-    "Corrigido o fechamento após o login e ao avançar para criar uma sala no Android ARM64.",
-    "Atualize para a Release 1.0.1 pela opção Atualizar APK do launcher ou baixe o APK oficial na área de downloads do site.",
-    "Após instalar, toque em Preparar AGMM para aplicar o pacote corrigido e depois em Jogar AGMM.",
-    "A versão mantém o mesmo pacote e assinatura da Release 1.0, Beta 0.1.2 e Beta 0.1.1.1; pode ser instalada por cima dessas versões.",
-    "Se a sessão Google expirou, refaça o login pelo launcher e compartilhe a página final da Innersloth com o próprio aplicativo.",
-    "Validado no Moto G10: conta conectada e sala online privada aberta com o AGMM reconhecido, sem o fechamento anterior.",
-    "Compatibilidade: Android 9+, ARM64 e Among Us 2026.9.29 (7492) instalado. Alvo de FPS mantido em 140.",
-    "Downloads e detalhes: https://github.com/KyroshKazehara/AGMM---LAUNCHER/releases/tag/v1.0.1"
+    "🎊 Conheça 20 novas funções! As habilidades e os controles estão na nova seção do site.",
+    "🔴 Impostores: Criomaníaco, Atômico, Militar, Cobradora, Pacto da Morte da Comunidade, Amaldiçoador.",
+    "🔵 Tripulantes: Flexível, Veterinário, Lagado, Nezha, Festejador, Samurai, Ignorável, Xiao Yao.",
+    "🟣 Neutros: Fantasma de Poções, Depressivo, O Louco, Dinossauro, Mestre das Armadilhas, Anti-Fobia.",
+    "🃏 Carta Morto vivo e 👾 modo Pac-Man: confira as novidades do Jogo de Cartas e dos modos.",
+    "🧪 As funções são experimentais; configurações dependem do anfitrião. Pode haver bugs.",
+    "📦 Pacote Steam: 58,0 MB. 💎 DLL avulsa: 33,6 MB. Tamanhos dos arquivos oficiais do GitHub.",
+    "📱 Launcher mobile 1.0.1: mantido o patch de correção de conta e criação de sala."
   ]
 }
