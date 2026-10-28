@@ -1,19 +1,16 @@
 {
-  "id": "agmm-steam-mobile-release-1-0-20261027",
+  "id": "agmm-launcher-release-1-0-1-correcao-20261028",
   "version": "1.0",
   "kind": "update",
-  "message": "🎉 LANÇAMENTO OFICIAL · Steam + Mobile Release 1.0 📱🚀",
+  "message": "AGMM Launcher 1.0.1 · Patch de correção",
   "notes": [
-    "LANÇAMENTO OFICIAL do AGMM Release 1.0: downloads diretos da DLL e do pacote Steam para Windows.",
-    "Pacote Steam: inclui BepInEx, runtime e plugin AGMM. Extraia o ZIP e copie o conteúdo da pasta interna para a pasta do jogo, ao lado de Among Us.exe.",
-    "DLL avulsa: requer BepInEx compatível já instalado. Com o jogo fechado, substitua a versão anterior em BepInEx/plugins/.",
-    "Pode haver bugs. Relate problemas no GitHub com a versão do jogo e os passos para reproduzir.",
-    "Site 1.0: os anúncios de pré-release e os timers foram substituídos por LANÇAMENTO OFICIAL.",
-    "🎊 Release 1.0 em destaque amarelo e dourado; downloads disponíveis com bolinha verde piscante. 🟢",
-    "💛 Avisos gerais com tema dourado comemorativo. Comunidade atualizada em 27/10/2026: 785 inscritos no YouTube e aproximadamente 103 membros no Discord. 🎉",
-    "📱🎉 Chegou a Release 1.0 do AGMM Launcher para Android, com o mod AGMM incluído!",
-    "🎮 Android 9+, ARM64 e Among Us 2026.9.29 (7492). Limite de 140 FPS; o desempenho depende do aparelho.",
-    "📦 APK oficial com a mesma assinatura das Betas 0.1.1.1 e 0.1.2. Quem usa a Beta 0.1.1 antiga precisa salvar seus dados e fazer migração manual.",
-    "🟢 Download mobile disponível, com tema dourado e bolinha verde piscante. Pode haver bugs. 💛"
+    "Corrigido o fechamento após o login e ao avançar para criar uma sala no Android ARM64.",
+    "Atualize para a Release 1.0.1 pela opção Atualizar APK do launcher ou baixe o APK oficial na área de downloads do site.",
+    "Após instalar, toque em Preparar AGMM para aplicar o pacote corrigido e depois em Jogar AGMM.",
+    "A versão mantém o mesmo pacote e assinatura da Release 1.0, Beta 0.1.2 e Beta 0.1.1.1; pode ser instalada por cima dessas versões.",
+    "Se a sessão Google expirou, refaça o login pelo launcher e compartilhe a página final da Innersloth com o próprio aplicativo.",
+    "Validado no Moto G10: conta conectada e sala online privada aberta com o AGMM reconhecido, sem o fechamento anterior.",
+    "Compatibilidade: Android 9+, ARM64 e Among Us 2026.9.29 (7492) instalado. Alvo de FPS mantido em 140.",
+    "Downloads e detalhes: https://github.com/KyroshKazehara/AGMM---LAUNCHER/releases/tag/v1.0.1"
   ]
 }
