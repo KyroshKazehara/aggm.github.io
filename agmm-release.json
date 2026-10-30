@@ -1,16 +1,10 @@
 {
-  "id": "agmm-novas-funcoes-release-20261028",
+  "id": "agmm-maintenance-20261030",
   "version": "1.0",
   "kind": "update",
-  "message": "🎉 Novas funções do AGMM · Conheça as novidades! 🎮",
+  "message": "AGMM O Maior está por vir",
   "notes": [
-    "🎊 Conheça 20 novas funções! As habilidades e os controles estão na nova seção do site.",
-    "🔴 Impostores: Criomaníaco, Atômico, Militar, Cobradora, Pacto da Morte da Comunidade, Amaldiçoador.",
-    "🔵 Tripulantes: Flexível, Veterinário, Lagado, Nezha, Festejador, Samurai, Ignorável, Xiao Yao.",
-    "🟣 Neutros: Fantasma de Poções, Depressivo, O Louco, Dinossauro, Mestre das Armadilhas, Anti-Fobia.",
-    "🃏 Carta Morto vivo e 👾 modo Pac-Man: confira as novidades do Jogo de Cartas e dos modos.",
-    "🧪 As funções são experimentais; configurações dependem do anfitrião. Pode haver bugs.",
-    "📦 Pacote Steam: 58,0 MB. 💎 DLL avulsa: 33,6 MB. Tamanhos dos arquivos oficiais do GitHub.",
-    "📱 Launcher mobile 1.0.1: mantido o patch de correção de conta e criação de sala."
+    "O site está em manutenção. Atualize a página para ver a tela de atualização.",
+    "Atualizando · 1% — indicador estático de manutenção."
   ]
 }
