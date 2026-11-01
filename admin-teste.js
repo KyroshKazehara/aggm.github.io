@@ -23,6 +23,49 @@
     if (!response.ok) throw new Error(`${result.error || 'Falha no serviço.'} (HTTP ${response.status} · ${path})`);
     return result;
   }
+
+  let previewReady=false, previewTimer, pagesTimer, expectedPublishedSite=null;
+  const publicSettingsURL=new URL('./site-settings.json',location.href);
+  function previewSettings(site){
+    if(previewReady&&site)$('private-preview-frame').contentWindow.postMessage({type:'agmm-private-settings',site},'*');
+  }
+  async function checkPages(automatic=false,attempt=0){
+    clearTimeout(pagesTimer);
+    status('pages-status','Conferindo o arquivo servido pelo GitHub Pages…');
+    try{
+      const url=new URL(publicSettingsURL);url.searchParams.set('check',Date.now());
+      const response=await fetch(url,{cache:'no-store',credentials:'omit',signal:AbortSignal.timeout(12000)});
+      if(!response.ok)throw new Error('O arquivo ainda não chegou ao Pages (HTTP '+response.status+').');
+      const site=await response.json();
+      if(expectedPublishedSite&&JSON.stringify(site)!==JSON.stringify(expectedPublishedSite))throw new Error('O Pages ainda está servindo a revisão anterior.');
+      previewSettings(site);
+      status('pages-status','GitHub Pages atualizado'+(expectedPublishedSite?' com seu teste':'')+'. A prévia abaixo recebeu os dados publicados. A página inicial segue em manutenção.');
+      return true;
+    }catch(error){
+      status('pages-status',error.message+(automatic&&attempt<11?' Vou conferir novamente em 10 segundos.':' Use “Conferir atualização” para tentar novamente.'),true);
+      if(automatic&&attempt<11)pagesTimer=setTimeout(()=>checkPages(true,attempt+1),10000);
+      return false;
+    }
+  }
+  function openPrivatePreview(){
+    clearTimeout(previewTimer);previewReady=false;
+    $('private-preview').hidden=false;
+    status('private-preview-status','Validando sua conta no servidor e abrindo a interface privada…');
+    const form=document.createElement('form');form.method='POST';form.action=API+'/api/creator/preview';form.target='agmm-private-preview';form.hidden=true;
+    const input=document.createElement('input');input.type='hidden';input.name='token';input.value=userToken;form.append(input);document.body.append(form);form.submit();form.remove();
+    previewTimer=setTimeout(()=>status('private-preview-status','A prévia não confirmou o carregamento. Reabra a prévia; se a sessão expirou, entre novamente na sua conta.',true),20000);
+    $('private-preview').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  window.addEventListener('message',event=>{
+    if(event.source!==$('private-preview-frame').contentWindow||event.data?.type!=='agmm-private-ready')return;
+    clearTimeout(previewTimer);previewReady=true;
+    status('private-preview-status','Conta oficial validada no servidor. Prévia privada aberta · Site 1.5.');
+    if(baseline)previewSettings(baseline);else checkPages();
+  });
+  $('preview-reopen').addEventListener('click',openPrivatePreview);
+  $('preview-edit').addEventListener('click',()=>($( 'admin-panel').hidden?$('admin-step'):$('admin-panel')).scrollIntoView({behavior:'smooth',block:'start'}));
+  $('check-pages').addEventListener('click',()=>checkPages());
+
   function section(name) {
     document.querySelectorAll('[data-panel]').forEach(el => { el.hidden = el.dataset.panel !== name; });
     document.querySelectorAll('[data-section]').forEach(el => el.setAttribute('aria-pressed',String(el.dataset.section===name)));
@@ -55,7 +98,7 @@
       $('publish-target').textContent=`Destino fixo: ${result.repository}/${result.path} · branch ${result.branch}`;
       $('base-sha').textContent=baseSha?baseSha.slice(0,12):'Arquivo será criado';
       status('connection-status',canPublish?'GitHub conectado; o Worker aceita publicação. O segredo não foi enviado ao navegador.':'Configurações carregadas, mas o Worker informou que a publicação ainda não está pronta.',!canPublish);
-      fillForms();showLinkStatus();return true;
+      fillForms();showLinkStatus();previewSettings(baseline);return true;
     } catch(error) { status('connection-status',error.message,true);canPublish=false;$('publish-button').disabled=true;return false; }
     finally {$('reload-site').disabled=false;}
   }
@@ -106,17 +149,17 @@
       const result=await request('/api/admin/site/publish',{method:'POST',token:adminToken,data:{site:draft,baseSha,confirm:true}});
       baseline=clone(draft);baseSha=result.contentSha||baseSha;updateDraftState();status('panel-status',`Publicado. Commit ${result.commit.slice(0,10)} em ${result.branch}.`);
       if(result.commitUrl){const link=document.createElement('a');link.href=result.commitUrl;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Abrir commit no GitHub ↗';link.className='commit-link';$('panel-status').append(' ',link);}
-      loadHistory();
+      expectedPublishedSite=clone(baseline);checkPages(true);loadHistory();
     } catch(error){status('panel-status',error.message,true);button.disabled=false;}
   });
   $('logout-button').addEventListener('click',async()=>{
     try{if(adminToken)await request('/api/admin/logout',{method:'POST',token:adminToken});}catch{}
     try{if(userToken)await request('/api/auth/logout',{method:'POST',token:userToken});}catch{}
-    userToken='';adminToken='';baseline=null;draft=null;canPublish=false;$('admin-panel').hidden=true;$('admin-step').hidden=true;$('account-form').hidden=false;$('account-form').reset();$('admin-form').reset();$('suggestions').replaceChildren();$('history-list').replaceChildren();status('account-status','Sessão encerrada.');
+    clearTimeout(previewTimer);clearTimeout(pagesTimer);previewReady=false;expectedPublishedSite=null;$('private-preview').hidden=true;$('private-preview-frame').src='about:blank';userToken='';adminToken='';baseline=null;draft=null;canPublish=false;$('admin-panel').hidden=true;$('admin-step').hidden=true;$('account-form').hidden=false;$('account-form').reset();$('admin-form').reset();$('suggestions').replaceChildren();$('history-list').replaceChildren();status('account-status','Sessão encerrada.');
   });
   $('account-form').addEventListener('submit',async event=>{
     event.preventDefault();const form=event.currentTarget,button=form.querySelector('button[type="submit"]');button.disabled=true;status('account-status','Conectando à API oficial AGMM…');
-    try{const result=await request('/api/auth/login',{method:'POST',data:Object.fromEntries(new FormData(form))});userToken=result.token||'';if(!userToken||!result.user)throw new Error('Resposta de login incompleta.');if(!result.user.isCreator){userToken='';throw new Error('Esta conta não tem acesso de criador.');}$('creator-label').textContent=`Conta oficial confirmada: ${result.user.displayName||result.user.username}. Valide a chave e o Authenticator.`;$('admin-step').hidden=false;form.hidden=true;status('account-status','Conta oficial validada.');$('admin-form').elements.key.focus();}
+    try{const result=await request('/api/auth/login',{method:'POST',data:Object.fromEntries(new FormData(form))});userToken=result.token||'';if(!userToken||!result.user)throw new Error('Resposta de login incompleta.');if(!result.user.isCreator){userToken='';throw new Error('Esta conta não tem acesso de criador.');}$('creator-label').textContent=`Conta oficial confirmada: ${result.user.displayName||result.user.username}. Valide a chave e o Authenticator.`;$('admin-step').hidden=false;form.hidden=true;status('account-status','Conta oficial validada.');openPrivatePreview();}
     catch(error){status('account-status',error.message,true);}
     finally{form.elements.password.value='';button.disabled=false;}
   });

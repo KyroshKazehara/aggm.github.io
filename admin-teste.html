@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#23040F">
   <meta name="robots" content="noindex,nofollow">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://agmm-comunidade.lukee-vstone.workers.dev; form-action 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'self' https://agmm-comunidade.lukee-vstone.workers.dev; form-action 'self' https://agmm-comunidade.lukee-vstone.workers.dev; frame-src https://agmm-comunidade.lukee-vstone.workers.dev; base-uri 'none'; object-src 'none'; frame-ancestors 'none'">
   <title>Painel de teste · AGMM</title>
-  <link rel="stylesheet" href="admin-teste.css">
-  <script defer src="admin-teste.js"></script>
+  <link rel="stylesheet" href="admin-teste.css?v=private-preview-1">
+  <script defer src="admin-teste.js?v=private-preview-1"></script>
 </head>
 <body>
   <main class="shell">
@@ -16,7 +16,7 @@
     <header class="heading">
       <p class="eyebrow">AGMM · ACESSO DE TESTE</p>
       <h1>Painel do criador</h1>
-      <p>Entre com a conta oficial. A validação administrativa continua protegida pelo código do painel e pelo Authenticator.</p>
+      <p>Sua conta oficial abre a prévia privada do site 1.5. Para publicar um teste, valide também a chave do painel e o Authenticator. Os visitantes continuam vendo a manutenção.</p>
     </header>
 
     <section class="card" aria-labelledby="login-title">
@@ -27,6 +27,13 @@
         <button type="submit">Entrar <span aria-hidden="true">↗</span></button>
       </form>
       <p id="account-status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card private-preview" id="private-preview" hidden aria-labelledby="private-preview-title">
+      <div class="dashboard-head"><div><p class="eyebrow">EXCLUSIVO DA CONTA OFICIAL</p><h2 id="private-preview-title">Site 1.5 · Prévia privada</h2><p>Esta interface é entregue pelo servidor somente à sua conta. A página pública permanece em manutenção.</p></div><div class="actions"><button id="preview-reopen" type="button" class="secondary">Reabrir prévia</button><button id="preview-edit" type="button">Ir ao painel de edição ↓</button></div></div>
+      <p id="private-preview-status" class="status" role="status" aria-live="polite"></p>
+      <iframe id="private-preview-frame" name="agmm-private-preview" title="Prévia privada do site AGMM 1.5" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-downloads" referrerpolicy="no-referrer"></iframe>
+      <div class="private-pages-check"><button id="check-pages" type="button" class="secondary">Conferir atualização no GitHub Pages</button><p id="pages-status" class="status" role="status" aria-live="polite">Após publicar um teste, acompanhe aqui quando o arquivo chegar ao Pages.</p></div>
     </section>
 
     <section class="card locked" id="admin-step" aria-labelledby="admin-title" hidden>
