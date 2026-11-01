@@ -113,6 +113,24 @@
     for(const key of ['title','version','url','secondaryUrl','description'])form.elements[key].value=item[key]||'';
   }
   $('version-channel').addEventListener('change',fillVersion);
+  // Editing a field immediately updates the draft; publication remains explicit.
+  for (const id of ['stats-form','links-form','content-form','version-form']) {
+    $(id).addEventListener('input',event=>{
+      if(!draft||event.target.id==='version-channel')return;
+      const form=event.currentTarget;
+      const values=Object.fromEntries(new FormData(form));
+      if(id==='stats-form')draft.socialStats={...draft.socialStats,...values};
+      if(id==='links-form')draft.socialLinks={...draft.socialLinks,...values};
+      if(id==='content-form')Object.assign(draft,values);
+      if(id==='version-form'){
+        const key=$('version-channel').value;
+        draft.versions[key]={...(draft.versions[key]||{})};
+        for(const field of ['title','version','url','secondaryUrl','description'])draft.versions[key][field]=form.elements[field].value.trim();
+      }
+      updateDraftState();renderMetrics();
+    });
+  }
+
   $('stats-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;draft.socialStats={...draft.socialStats,youtubeSubscribers:f.elements.youtubeSubscribers.value.trim(),discordMembers:f.elements.discordMembers.value.trim()};updateDraftState();});
   $('links-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;draft.socialLinks={...draft.socialLinks};for(const key of ['discord1','discord2','youtube','twitch','twitter'])draft.socialLinks[key]=f.elements[key].value.trim();updateDraftState();});
   $('content-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;for(const key of ['homeTitle','homeDescription','noticeTitle','noticeBody','interfaceHtml'])draft[key]=f.elements[key].value;updateDraftState();});
