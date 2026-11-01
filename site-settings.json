@@ -1,0 +1,39 @@
+{
+  "homeTitle": "Um novo jeito de ser SUS.",
+  "homeDescription": "Todos os modos. Novas funções. A mesma vontade de jogar mais uma partida.",
+  "noticeTitle": "Novidades do AGMM · teste de publicação",
+  "noticeBody": "As descrições e os downloads oficiais foram preservados.",
+  "interfaceHtml": "",
+  "socialLinks": {
+    "discord1": "https://discord.gg/WVbwFvehyt",
+    "discord2": "",
+    "youtube": "https://www.youtube.com/@Kael_lives_Oficcial",
+    "twitch": "",
+    "twitter": ""
+  },
+  "socialStats": {
+    "discordMembers": "106 membros",
+    "youtubeSubscribers": "3,13 mil inscritos"
+  },
+  "versions": {
+    "android-beta": {
+      "title": "AGMM Launcher — Prévia Beta 0.1.1.1 · Correção de assinatura",
+      "version": "0.1.1.1-beta",
+      "description": "Patch da **Beta 0.1.1**, dedicado à assinatura do aplicativo e à continuidade das próximas atualizações.\r\n\r\n### O que mudou\r\n\r\n- Assinatura do APK atualizada para o novo ciclo de distribuição.\r\n- Manifesto `beta.json` assinado, com versão, tamanho e SHA-256 do APK desta release.\r\n- Identificação do launcher atualizada para **Beta 0.1.1.1**.\r\n\r\nA base antiga do launcher e o carregador foram mantidos. **Esta versão não inclui a DLL do mod AGMM e não é a Release 1.0.**\r\n\r\n### Instalação inicial obrigatória\r\n\r\nComo a assinatura do APK mudou, o Android **não permite instalar esta versão por cima da Beta anterior**. Mesmo que o aviso apareça no atualizador antigo, a substituição direta será recusada.\r\n\r\n1. Salve os dados e configurações que quiser manter.\r\n2. Desinstale o launcher Beta anterior.\r\n3. Baixe e instale **AGMM-Launcher.apk** desta release.\r\n\r\nA desinstalação pode apagar os dados do launcher. As próximas versões de distribuição deverão manter o mesmo pacote e certificado desta 0.1.1.1 para permitir atualização normal.\r\n\r\n### Arquivos\r\n\r\n- **AGMM-Launcher.apk**: aplicativo Android.\r\n- **beta.json**: manifesto assinado usado pelo atualizador; não é necessário instalá-lo manualmente.\r\n- **AGMM-Launcher-0.1.1.1-fontes.zip**: fontes correspondentes desta revisão.\r\n- **SHA256SUMS.txt**: hashes para conferência dos downloads.\r\n\r\nCompatibilidade alvo: **Android 9 ou superior, ARM64 e Among Us 2026.9.29 (7492)**.\r\n\r\nValidação local: compilação release, 17 testes sem falhas, assinatura APK, manifesto RSA/SHA-256, integridade e alinhamento verificados. Esta revisão ainda não foi instalada e testada de ponta a ponta no telefone.\r\n",
+      "url": "https://github.com/KyroshKazehara/AGMM---LAUNCHER/releases/download/v0.1.1.1-beta/AGMM-Launcher.apk"
+    },
+    "android-release": {
+      "title": "AGMM-Launcher — Release 1.0.1 · Correção de fechamento",
+      "version": "1.0.1",
+      "description": "Patch da Release 1.0 que corrige o fechamento do jogo após conectar a conta e ao avançar para a criação de sala no Android ARM64.\r\n\r\n### Correção\r\n- Removido no Android um hook visual de cor aplicado a uma função ARM64 curta, que sobrescrevia a função seguinte e provocava uma falha nativa.\r\n- Pacote do mod e hashes de integridade atualizados para a DLL corrigida.\r\n- Mantidos o pacote com.agmm.launcher e o mesmo certificado das versões recentes. Versão interna: 123.\r\n\r\n### Instalação\r\nAtualize pelo launcher ou instale AGMM-Launcher.apk sobre a versão 1.0.0, 0.1.2 ou 0.1.1.1. Depois toque em Preparar AGMM para aplicar o pacote corrigido e em Jogar AGMM. Se a sessão Google tiver expirado, refaça o login pelo launcher.\r\n\r\n### Validação\r\nCompilação Release, 22 testes sem falhas, assinatura APK, alinhamento, manifesto assinado e hashes do pacote e da DLL verificados. No Moto G10, o login concluiu e uma sala online privada abriu com o AGMM reconhecido, sem reproduzir o fechamento anterior. Este teste não cobre todas as funções e partidas multiplayer completas.\r\n\r\nCompatibilidade alvo: Android 9 ou superior, ARM64 e Among Us 2026.9.29 (7492) instalado. Alvo de FPS mantido em 140; o desempenho efetivo depende do aparelho.\r\n\r\nAnexos: somente AGMM-Launcher.apk e beta.json assinado. Sem fontes ou chaves privadas.",
+      "url": "https://github.com/KyroshKazehara/AGMM---LAUNCHER/releases/download/v1.0.1/AGMM-Launcher.apk"
+    },
+    "pc-release": {
+      "title": "AGMM — Release 1.0 | Steam + DLL",
+      "version": "v1.0",
+      "description": "## 🎮 AGMM — All GameModes Modified\n\nDistribuição Release 1.0 do mod AGMM para Among Us.\n\n### Downloads\n- **Agmm - Steam-1.0.zip** — pacote para Steam no Windows com BepInEx, runtime e plugin AGMM. Extraia e copie o conteúdo da pasta interna para a pasta do jogo, ao lado de `Among Us.exe`.\n- **AGMM(Release 1.0).dll** — plugin avulso para uma instalação BepInEx compatível. Coloque em `BepInEx/plugins/` com o jogo fechado, substituindo a versão anterior.\n\nA DLL avulsa é idêntica à incluída no ZIP. A integridade do arquivo ZIP foi verificada.\n\n### Compatibilidade e instalação\nA versão exata do Among Us compatível ainda não foi documentada neste repositório. Esta publicação distribui os arquivos fornecidos; não foi realizado teste de execução do jogo.\n\nConsulte o [README](https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified#readme) para as instruções completas.",
+      "url": "https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified/releases/download/v1.0/AGMM.Release.1.0.dll",
+      "secondaryUrl": "https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified/releases/download/v1.0/Agmm.-.Steam-1.0.zip"
+    }
+  }
+}
