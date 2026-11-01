@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#23040F">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://agmm-comunidade.lukee-vstone.workers.dev; form-action 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'">
+  <title>Painel de teste · AGMM</title>
+  <link rel="stylesheet" href="admin-teste.css">
+  <script defer src="admin-teste.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <a class="back" href="./">← Voltar à página de atualização</a>
+    <header class="heading">
+      <p class="eyebrow">AGMM · ACESSO DE TESTE</p>
+      <h1>Painel do criador</h1>
+      <p>Entre com a conta oficial. A validação administrativa continua protegida pelo código do painel e pelo Authenticator.</p>
+    </header>
+
+    <section class="card" aria-labelledby="login-title">
+      <div class="card-top"><span class="step">01</span><div><h2 id="login-title">Entrar na conta oficial</h2><p>As credenciais são enviadas diretamente ao serviço AGMM.</p></div></div>
+      <form id="account-form" autocomplete="on">
+        <label>Usuário<input name="username" autocomplete="username" required maxlength="64"></label>
+        <label>Senha<input name="password" type="password" autocomplete="current-password" required maxlength="256"></label>
+        <button type="submit">Entrar <span aria-hidden="true">↗</span></button>
+      </form>
+      <p id="account-status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card locked" id="admin-step" aria-labelledby="admin-title" hidden>
+      <div class="card-top"><span class="step">02</span><div><h2 id="admin-title">Validar painel administrativo</h2><p id="creator-label">A conta precisa ser reconhecida como criador pelo servidor.</p></div></div>
+      <form id="admin-form">
+        <label>Chave do painel<input name="key" type="password" autocomplete="off" required maxlength="256"></label>
+        <label>Código do Authenticator<input name="code" inputmode="numeric" autocomplete="one-time-code" required minlength="6" maxlength="8"></label>
+        <button type="submit">Validar e abrir painel <span aria-hidden="true">↗</span></button>
+      </form>
+      <p id="admin-status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="dashboard" id="admin-panel" hidden aria-labelledby="panel-title">
+      <div class="dashboard-head">
+        <div><p class="eyebrow">SESSÃO ADMINISTRATIVA VALIDADA</p><h2 id="panel-title">Central AGMM</h2><p id="publish-target" class="muted"></p></div>
+        <div class="actions"><button class="secondary" id="reload-site" type="button">Recarregar dados</button><button class="secondary" id="logout-button" type="button">Sair</button></div>
+      </div>
+      <div class="metric-grid" id="metrics"></div>
+      <nav class="category-nav" aria-label="Categorias do painel">
+        <button type="button" data-section="overview" aria-pressed="true">Visão geral</button>
+        <button type="button" data-section="stats" aria-pressed="false">Estatísticas</button>
+        <button type="button" data-section="versions" aria-pressed="false">Mod Versions</button>
+        <button type="button" data-section="links" aria-pressed="false">Links Updates</button>
+        <button type="button" data-section="content" aria-pressed="false">Conteúdo</button>
+        <button type="button" data-section="letters" aria-pressed="false">Cartinhas</button>
+        <button type="button" data-section="history" aria-pressed="false">Publicações</button>
+      </nav>
+
+      <section class="panel-section" data-panel="overview">
+        <h3>Configuração conectada</h3>
+        <p id="connection-status" class="note">Carregando o estado do GitHub…</p>
+        <div class="overview-grid"><article><span>Último SHA lido</span><strong id="base-sha">Aguardando</strong></article><article><span>Estado do rascunho</span><strong id="draft-state">Sem alterações</strong></article></div>
+        <details class="diff-box"><summary>Revisar JSON que será publicado</summary><pre id="draft-json"></pre></details>
+      </section>
+
+      <section class="panel-section" data-panel="stats" hidden>
+        <h3>Contagens exibidas no site</h3><p class="note">Atualize os números manualmente aqui. A coleta automática de YouTube/Discord ainda não está disponível no Worker publicado.</p>
+        <form id="stats-form" class="settings-form"><label>Inscritos no YouTube<input name="youtubeSubscribers" maxlength="60"></label><label>Membros no Discord<input name="discordMembers" maxlength="60"></label><button type="submit">Salvar no rascunho</button></form>
+      </section>
+
+      <section class="panel-section" data-panel="versions" hidden>
+        <h3>Mod Versions · Releases</h3><p class="note">As URLs são conferidas pelo Worker e ficam restritas às releases oficiais.</p>
+        <label class="select-label">Canal<select id="version-channel"><option value="pc-release">PC · Release</option><option value="pc-beta">PC · Beta</option><option value="pc-dev">PC · Dev</option><option value="android-release">Android · Release</option><option value="android-beta">Android · Beta</option><option value="android-canary">Android · Canary</option></select></label>
+        <form id="version-form" class="settings-form"><label>Título<input name="title" maxlength="1000"></label><label>Versão<input name="version" maxlength="1000"></label><label>Link principal<input name="url" type="url" maxlength="1000"></label><label>Link secundário<input name="secondaryUrl" type="url" maxlength="1000"></label><label class="wide">Descrição / notas<textarea name="description" rows="7" maxlength="20000"></textarea></label><button type="submit">Salvar release no rascunho</button></form>
+      </section>
+
+      <section class="panel-section" data-panel="links" hidden>
+        <h3>Links oficiais e atualizações</h3><p class="note">Edite os destinos e os números exibidos. O GitHub recebe somente o arquivo site-settings.json.</p>
+        <form id="links-form" class="settings-form"><label>Discord principal<input name="discord1" type="url" maxlength="500"></label><label>Discord secundário<input name="discord2" type="url" maxlength="500"></label><label>YouTube<input name="youtube" type="url" maxlength="500"></label><label>Twitch<input name="twitch" type="url" maxlength="500"></label><label>X / Twitter<input name="twitter" type="url" maxlength="500"></label><button type="submit">Salvar links no rascunho</button></form>
+      </section>
+
+      <section class="panel-section" data-panel="content" hidden>
+        <h3>Textos do site</h3><p class="note">HTML livre não é executado. O Worker remove scripts, estilos e tags fora da lista permitida.</p>
+        <form id="content-form" class="settings-form"><label>Título inicial<input name="homeTitle" maxlength="160"></label><label>Descrição inicial<textarea name="homeDescription" rows="3" maxlength="3000"></textarea></label><label>Título do aviso<input name="noticeTitle" maxlength="160"></label><label>Texto do aviso<textarea name="noticeBody" rows="4" maxlength="3000"></textarea></label><label class="wide">HTML de conteúdo seguro<textarea name="interfaceHtml" rows="7" maxlength="10000" placeholder="<section><h2>Nova seção</h2><p>Texto...</p></section>"></textarea></label><button type="submit">Salvar conteúdo no rascunho</button></form>
+      </section>
+
+      <section class="panel-section" data-panel="letters" hidden>
+        <div class="section-heading"><div><h3>Moderação das cartinhas</h3><p class="muted">Inbox administrativa; este teste mantém as ações de moderação desativadas.</p></div><button class="secondary" id="refresh-letters" type="button">Atualizar caixa</button></div>
+        <p id="letters-status" class="status" role="status" aria-live="polite"></p><div id="suggestions" class="suggestions" aria-live="polite"></div>
+      </section>
+
+      <section class="panel-section" data-panel="history" hidden>
+        <h3>Histórico de publicações</h3><p class="muted">Cada publicação cria um commit novo em main. Reverter também cria um commit preservando o histórico.</p>
+        <p id="history-status" class="status" role="status" aria-live="polite"></p><div id="history-list" class="history-list"></div>
+      </section>
+
+      <div class="publish-bar"><p id="panel-status" class="status" role="status" aria-live="polite"></p><button id="publish-button" type="button" disabled>Publicar atualização no GitHub</button></div>
+    </section>
+    <footer>O token do GitHub fica somente como Secret no Worker; esta página nunca o recebe.</footer>
+  </main>
+</body>
+</html>
