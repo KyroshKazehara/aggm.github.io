@@ -20,7 +20,7 @@
     catch { throw new Error('Não foi possível conectar ao Worker AGMM. Confira a conexão e o CORS do domínio.'); }
     let result;
     try { result=await response.json(); } catch { throw new Error(`O serviço respondeu com HTTP ${response.status}, sem JSON válido.`); }
-    if (!response.ok) throw new Error(result.error || `O serviço respondeu com HTTP ${response.status}.`);
+    if (!response.ok) throw new Error(`${result.error || 'Falha no serviço.'} (HTTP ${response.status} · ${path})`);
     return result;
   }
   function section(name) {
@@ -55,8 +55,8 @@
       $('publish-target').textContent=`Destino fixo: ${result.repository}/${result.path} · branch ${result.branch}`;
       $('base-sha').textContent=baseSha?baseSha.slice(0,12):'Arquivo será criado';
       status('connection-status',canPublish?'GitHub conectado; o Worker aceita publicação. O segredo não foi enviado ao navegador.':'Configurações carregadas, mas o Worker informou que a publicação ainda não está pronta.',!canPublish);
-      fillForms();showLinkStatus();
-    } catch(error) { status('connection-status',error.message,true);canPublish=false;$('publish-button').disabled=true; }
+      fillForms();showLinkStatus();return true;
+    } catch(error) { status('connection-status',error.message,true);canPublish=false;$('publish-button').disabled=true;return false; }
     finally {$('reload-site').disabled=false;}
   }
   function fillForms() {
@@ -122,7 +122,7 @@
   });
   $('admin-form').addEventListener('submit',async event=>{
     event.preventDefault();const form=event.currentTarget,button=form.querySelector('button[type="submit"]');button.disabled=true;status('admin-status','Validando chave do painel e Authenticator…');
-    try{const result=await request('/api/admin/login',{method:'POST',data:Object.fromEntries(new FormData(form)),token:userToken});adminToken=result.token||'';if(!adminToken)throw new Error('O serviço não retornou uma sessão administrativa.');await loadSite();if(!baseline)throw new Error('Não foi possível ler as configurações protegidas do site.');$('admin-step').hidden=true;$('admin-panel').hidden=false;section('overview');}
+    try{const result=await request('/api/admin/login',{method:'POST',data:Object.fromEntries(new FormData(form)),token:userToken});adminToken=result.token||'';if(!adminToken)throw new Error('O serviço não retornou uma sessão administrativa.');if(!await loadSite())throw new Error($('connection-status').textContent||'Não foi possível ler as configurações protegidas do site.');$('admin-step').hidden=true;$('admin-panel').hidden=false;section('overview');}
     catch(error){adminToken='';status('admin-status',error.message,true);}
     finally{form.reset();button.disabled=false;}
   });
