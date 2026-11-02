@@ -1,20 +1,8 @@
 {
   "homeTitle": "Um novo jeito de ser SUS.",
   "homeDescription": "Todos os modos. Novas funções. A mesma vontade de jogar mais uma partida.",
-  "noticeTitle": "Novidades do AGMM · teste de publicação",
+  "noticeTitle": "Novidades do AGMM",
   "noticeBody": "As descrições e os downloads oficiais foram preservados.",
-  "interfaceHtml": "",
-  "socialLinks": {
-    "discord1": "https://discord.gg/WVbwFvehyt",
-    "discord2": "",
-    "youtube": "https://www.youtube.com/@Kael_lives_Oficcial",
-    "twitch": "",
-    "twitter": ""
-  },
-  "socialStats": {
-    "discordMembers": "106 membros",
-    "youtubeSubscribers": "3,13 mil inscritos"
-  },
   "versions": {
     "android-beta": {
       "title": "AGMM Launcher — Prévia Beta 0.1.1.1 · Correção de assinatura",
@@ -35,5 +23,23 @@
       "url": "https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified/releases/download/v1.0/AGMM.Release.1.0.dll",
       "secondaryUrl": "https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified/releases/download/v1.0/Agmm.-.Steam-1.0.zip"
     }
+  },
+  "interfaceHtml": "",
+  "socialLinks": {
+    "discord1": "https://discord.gg/WVbwFvehyt",
+    "discord2": "",
+    "youtube": "https://www.youtube.com/@Kael_lives_Oficcial",
+    "twitch": "",
+    "twitter": "",
+    "tiktok": "https://www.tiktok.com/@zkaelen_oficiall"
+  },
+  "socialStats": {
+    "discordMembers": "106 membros",
+    "youtubeSubscribers": "807 inscritos",
+    "tiktokFollowers": "19 seguidores",
+    "twitchGoalCurrent": "0",
+    "twitchGoalTarget": "50",
+    "youtubeGoalCurrent": "0",
+    "youtubeGoalTarget": "3000"
   }
 }

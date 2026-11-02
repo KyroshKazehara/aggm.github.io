@@ -6,7 +6,7 @@ self.addEventListener('push',event=>{
  const root=new URL('./',self.registration.scope);
  event.waitUntil(self.registration.showNotification(typeof data.title==='string'?data.title:'Novidades no AGMM',{
   body:typeof data.body==='string'?data.body:'Uma nova atualização está disponível. Toque para ver as notas.',
-  icon:new URL('agmm-icon.png',root).href,badge:new URL('agmm-icon.png',root).href,
+  icon:new URL('agmm-icon-v2.png',root).href,badge:new URL('agmm-icon-v2.png',root).href,
   tag:'agmm-release-'+String(data.id||'latest').slice(0,100),
   data:{url:new URL(data.kind==='suggestion'?'?suggestion-alert=1#suggestions':'?release-notes=1#home',root).href}
  }));
