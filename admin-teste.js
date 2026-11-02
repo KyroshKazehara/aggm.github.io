@@ -103,8 +103,8 @@
     finally {$('reload-site').disabled=false;}
   }
   function fillForms() {
-    const stats=$('stats-form');stats.elements.youtubeSubscribers.value=draft.socialStats.youtubeSubscribers||'';stats.elements.discordMembers.value=draft.socialStats.discordMembers||'';
-    const links=$('links-form');for(const key of ['discord1','discord2','youtube','twitch','twitter'])links.elements[key].value=draft.socialLinks[key]||'';
+    const stats=$('stats-form');stats.elements.youtubeSubscribers.value=draft.socialStats.youtubeSubscribers||'';stats.elements.discordMembers.value=draft.socialStats.discordMembers||'';for(const key of ['tiktokFollowers','twitchGoalCurrent','twitchGoalTarget','youtubeGoalCurrent','youtubeGoalTarget'])stats.elements[key].value=draft.socialStats[key]??({twitchGoalCurrent:'0',twitchGoalTarget:'50',youtubeGoalCurrent:'0',youtubeGoalTarget:'3000'}[key]||'');
+    const links=$('links-form');for(const key of ['discord1','discord2','youtube','twitch','twitter','tiktok'])links.elements[key].value=draft.socialLinks[key]||'';
     const content=$('content-form');for(const key of ['homeTitle','homeDescription','noticeTitle','noticeBody','interfaceHtml'])content.elements[key].value=draft[key]||'';
     fillVersion();
   }
@@ -131,8 +131,8 @@
     });
   }
 
-  $('stats-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;draft.socialStats={...draft.socialStats,youtubeSubscribers:f.elements.youtubeSubscribers.value.trim(),discordMembers:f.elements.discordMembers.value.trim()};updateDraftState();});
-  $('links-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;draft.socialLinks={...draft.socialLinks};for(const key of ['discord1','discord2','youtube','twitch','twitter'])draft.socialLinks[key]=f.elements[key].value.trim();updateDraftState();});
+  $('stats-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;draft.socialStats={...draft.socialStats,youtubeSubscribers:f.elements.youtubeSubscribers.value.trim(),discordMembers:f.elements.discordMembers.value.trim(),...Object.fromEntries(['tiktokFollowers','twitchGoalCurrent','twitchGoalTarget','youtubeGoalCurrent','youtubeGoalTarget'].map(key=>[key,f.elements[key].value.trim()]))};updateDraftState();});
+  $('links-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;draft.socialLinks={...draft.socialLinks};for(const key of ['discord1','discord2','youtube','twitch','twitter','tiktok'])draft.socialLinks[key]=f.elements[key].value.trim();updateDraftState();});
   $('content-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget;for(const key of ['homeTitle','homeDescription','noticeTitle','noticeBody','interfaceHtml'])draft[key]=f.elements[key].value;updateDraftState();});
   $('version-form').addEventListener('submit',event=>{event.preventDefault();const f=event.currentTarget,key=$('version-channel').value;draft.versions[key]={...(draft.versions[key]||{})};for(const field of ['title','version','url','secondaryUrl','description'])draft.versions[key][field]=f.elements[field].value.trim();updateDraftState();renderMetrics();});
 
