@@ -71,6 +71,9 @@
   $('auth-area').hidden=!!user;$('profile-area').hidden=!user;$('my-suggestions').hidden=!user;
   $('creator-nav').hidden=!user?.isCreator;if(!user?.isCreator){adminToken='';notifyAdminSession(false);$('admin-area').hidden=true;$('admin-login').hidden=false;}document.querySelectorAll('.creator-panel-link[data-page=admin]').forEach(el=>el.hidden=!user?.isCreator);window.dispatchEvent(new CustomEvent('agmm:user-change',{detail:{isCreator:!!user?.isCreator}}));document.querySelector('.site-nav').dispatchEvent(new Event('navselection'));
   $('account-label').textContent=user?user.displayName:'Entrar';
+  window.dispatchEvent(new CustomEvent('agmm:profile', { detail: user
+    ? { name: user.displayName || user.username, avatar: user.avatar ? asset(user.avatar) : '' }
+    : null }));
   const navAvatar=$('nav-avatar');navAvatar.hidden=!user?.avatar;
   if(user?.avatar)navAvatar.src=asset(user.avatar);else navAvatar.removeAttribute('src');
   $('suggestion-account').replaceChildren();
