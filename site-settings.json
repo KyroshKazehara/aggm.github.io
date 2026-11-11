@@ -5,10 +5,11 @@
   "noticeBody": "As descrições e os downloads oficiais foram preservados.",
   "versions": {
     "android-beta": {
-      "title": "AGMM Launcher — Prévia Beta 0.1.1.1 · Correção de assinatura",
-      "version": "0.1.1.1-beta",
-      "description": "Patch da **Beta 0.1.1**, dedicado à assinatura do aplicativo e à continuidade das próximas atualizações.\r\n\r\n### O que mudou\r\n\r\n- Assinatura do APK atualizada para o novo ciclo de distribuição.\r\n- Manifesto `beta.json` assinado, com versão, tamanho e SHA-256 do APK desta release.\r\n- Identificação do launcher atualizada para **Beta 0.1.1.1**.\r\n\r\nA base antiga do launcher e o carregador foram mantidos. **Esta versão não inclui a DLL do mod AGMM e não é a Release 1.0.**\r\n\r\n### Instalação inicial obrigatória\r\n\r\nComo a assinatura do APK mudou, o Android **não permite instalar esta versão por cima da Beta anterior**. Mesmo que o aviso apareça no atualizador antigo, a substituição direta será recusada.\r\n\r\n1. Salve os dados e configurações que quiser manter.\r\n2. Desinstale o launcher Beta anterior.\r\n3. Baixe e instale **AGMM-Launcher.apk** desta release.\r\n\r\nA desinstalação pode apagar os dados do launcher. As próximas versões de distribuição deverão manter o mesmo pacote e certificado desta 0.1.1.1 para permitir atualização normal.\r\n\r\n### Arquivos\r\n\r\n- **AGMM-Launcher.apk**: aplicativo Android.\r\n- **beta.json**: manifesto assinado usado pelo atualizador; não é necessário instalá-lo manualmente.\r\n- **AGMM-Launcher-0.1.1.1-fontes.zip**: fontes correspondentes desta revisão.\r\n- **SHA256SUMS.txt**: hashes para conferência dos downloads.\r\n\r\nCompatibilidade alvo: **Android 9 ou superior, ARM64 e Among Us 2026.9.29 (7492)**.\r\n\r\nValidação local: compilação release, 17 testes sem falhas, assinatura APK, manifesto RSA/SHA-256, integridade e alinhamento verificados. Esta revisão ainda não foi instalada e testada de ponta a ponta no telefone.\r\n",
-      "url": "https://github.com/KyroshKazehara/AGMM---LAUNCHER/releases/download/v0.1.1.1-beta/AGMM-Launcher.apk"
+      "title": "AGMM Launcher Beta v0.1.5.5",
+      "version": "AGMM-BETA-0.1.5.5",
+      "description": "## AGMM Launcher Beta v0.1.5.5\n\nAtualização compatível com instalações anteriores do launcher, incluindo Release 1.0 e 1.1.0. O APK mantém o pacote Android e a assinatura usada pelas versões anteriores, permitindo atualizar sem desinstalar.\n\n- Version code: 132\n- Pacote: `com.agmm.launcher`\n- Inclui o mod AGMM para Android e a identificação no jogo `AGMM - BETA v0.1.5.5`\n- O botão **Atualizar** valida o manifesto assinado, versão, tamanho, SHA-256 e assinatura do APK antes de abrir o instalador.\n\nInstale o APK e confirme a atualização no Android. Depois, use **Preparar AGMM** no launcher.\n\nValidação local: APK compilado e assinado; manifesto verificado com a chave pública configurada; hash e tamanho conferem. A aparência em partida e o fluxo de atualização via release publicada ainda não foram testados após publicação.",
+      "url": "https://github.com/KyroshKazehara/AGMM---LAUNCHER/releases/download/AGMM-BETA-0.1.5.5/AGMM-Launcher.apk",
+      "secondaryUrl": "https://github.com/KyroshKazehara/AGMM---LAUNCHER/releases/download/AGMM-BETA-0.1.5.5/beta.json"
     },
     "android-release": {
       "title": "AGMM Launcher 1.1.0 — Update Especial · AGMM 1.0 Android",
@@ -25,11 +26,11 @@
       "secondaryUrl": "https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified/releases/download/v1.0/Agmm.-.Steam-1.0.zip"
     },
     "pc-beta": {
-      "title": "AGMM BETA V0.1.5.2",
-      "version": "0.1.5.2",
-      "url": "https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified/releases/download/v0.1.5.2/AGMM-BETA-V0.1.5.2.dll",
+      "title": "AGMM BETA v0.1.5.5.1 — correção e Discord",
+      "version": "0.1.5.5.1",
+      "url": "https://github.com/KyroshKazehara/AGMM---All-GameModes-Modified/releases/download/v0.1.5.5.1/AGMM.dll",
       "secondaryUrl": "",
-      "description": "Atualização beta para PC com os controles das funções nos botões nativos do Among Us.\n\n### Mudanças\n\n- As habilidades das criações compatíveis passam a usar os botões nativos do HUD, com ícones e nomes personalizados.\n- Super Sonic usa Habilidade para Velocidade, PET para Aura e Matar para Explosão.\n- Segurança usa Habilidade para instalar câmeras e PET para abrir Câmeras.\n- Recargas dos poderes são apresentadas nos botões nativos e sincronizadas com o anfitrião.\n- Nome da versão atualizado para AGMM BETA V0.1.5.2.\n\n### Instalação e atualização\n\nA DLL anexada é para Among Us Steam no Windows, versão 2026.9.29, com BepInEx compatível. Com o jogo fechado, substitua o plugin anterior em BepInEx/plugins pela nova DLL. Instalações com o atualizador beta podem detectar esta pré-release e oferecer a atualização.\n\n### Validação\n\nCompilação Release para Windows concluída sem erros. Os ícones de Segurança e Super Sonic foram conferidos na DLL. Teste dos controles em partida multiplayer ainda pendente."
+      "description": "## AGMM Beta v0.1.5.5.1 — correção para PC\n\n- Adiciona Rich Presence próprio do AGMM no Discord, usando o ícone do app e exibindo a versão sem repetir o nome do mod.\n- Mantém o estado da atividade do jogo e usa a atividade original como fallback se o Discord não estiver disponível.\n- Inclui a versão de correção 0.1.5.5.1, compatível com o atualizador beta que compara versões com hotfix. Instalações antigas sem esse atualizador precisam instalar uma DLL intermediária/manual.\n\n## Instalação\n\nDLL para Windows/PC com Among Us e BepInEx compatíveis. Para instalação manual, feche o jogo e substitua a DLL do AGMM em `BepInEx/plugins`. Para atualização pelo menu do mod, esta pré-release aparece para instalações que já tenham o atualizador compatível.\n\n## Validação\n\nCompilação Windows Beta concluída sem erros. A atividade ainda precisa ser conferida no Discord com o jogo aberto.\n\nSHA-256 (AGMM.dll): `DA41BA4942830C30AE04894D4979E20E6533CD2350B0F14DFA3EFD51C0F3F2F5`\n\nEsta publicação inclui a DLL Windows; o código-fonte correspondente a esta compilação ainda não foi sincronizado nesta tag."
     }
   },
   "interfaceHtml": "",
@@ -45,9 +46,9 @@
     "discordMembers": "107 membros",
     "youtubeSubscribers": "816 inscritos",
     "tiktokFollowers": "27 seguidores",
-    "twitchGoalCurrent": "12.69",
+    "twitchGoalCurrent": "13.02",
     "twitchGoalTarget": "50",
-    "youtubeGoalCurrent": "1614",
+    "youtubeGoalCurrent": "1670",
     "youtubeGoalTarget": "3000"
   }
 }
